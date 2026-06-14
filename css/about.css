@@ -1,0 +1,422 @@
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
+
+/* ========================================
+   SHARED: SECTION HEADER
+   ======================================== */
+
+.about-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.about-star {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-section-title {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  color: #333333;
+}
+
+/* ========================================
+   PORTRAIT
+   ======================================== */
+
+.about-portrait {
+  display: flex;
+  justify-content: center;
+  padding-top: 160px;
+  padding-bottom: 80px;
+  background: var(--color-page-bg);
+}
+
+.about-portrait__img {
+  width: 652px;
+  height: 672px;
+  border-radius: 32px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================================
+   ABOUT TEXT
+   ======================================== */
+
+.about-text {
+  width: 1323px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+.about-text__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-text__body p {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+/* ========================================
+   SKILLS
+   ======================================== */
+
+.about-skills {
+  width: 1323px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+.skills-container {
+  background: #DCD5FF;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.skill-badge {
+  background: #4C25A7;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  height: 48px;
+}
+
+.skill-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.skill-badge__text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+/* ========================================
+   TOOL STACKS
+   ======================================== */
+
+.about-tools {
+  width: 1323px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+.tools-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tools-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.tool-img {
+  width: 166px;
+  height: 203px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tool-img--wide {
+  width: 176px;
+}
+
+/* ========================================
+   FUN-IVITY
+   ======================================== */
+
+.about-funivity {
+  padding-bottom: 80px;
+}
+
+.about-section-header--padded {
+  width: 1323px;
+  margin: 0 auto 32px;
+}
+
+.funivity-stack {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  cursor: pointer;
+  outline: none;
+}
+
+.funivity-stack:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* Each card centered in the container */
+.funivity-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 393px;
+  height: 489px;
+  margin-left: -196.5px;
+  margin-top: -244.5px;
+  overflow: visible;
+  transition: transform 0.6s ease, z-index 0s;
+}
+
+/* Stacked rotations — z-index 4 = top of stack */
+.funivity-card:nth-child(1) { transform: rotate(-9.26deg);  z-index: 4; }
+.funivity-card:nth-child(2) { transform: rotate(1.54deg);   z-index: 3; }
+.funivity-card:nth-child(3) { transform: rotate(15.03deg);  z-index: 2; }
+.funivity-card:nth-child(4) { transform: rotate(-7.79deg);  z-index: 1; }
+
+/* Unstacked — 2×2 grid via translate */
+.funivity-stack.unstacked .funivity-card:nth-child(1) {
+  transform: translate(-210px, -255px) rotate(0deg);
+  z-index: 1;
+}
+.funivity-stack.unstacked .funivity-card:nth-child(2) {
+  transform: translate(210px, -255px) rotate(0deg);
+  z-index: 1;
+}
+.funivity-stack.unstacked .funivity-card:nth-child(3) {
+  transform: translate(210px, 255px) rotate(0deg);
+  z-index: 1;
+}
+.funivity-stack.unstacked .funivity-card:nth-child(4) {
+  transform: translate(-210px, 255px) rotate(0deg);
+  z-index: 1;
+}
+
+.funivity-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/* ========================================
+   RESUME DOWNLOAD
+   ======================================== */
+
+.about-resume {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 80px;
+}
+
+.about-resume__link {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-resume__wrapper {
+  position: relative;
+  width: 637px;
+}
+
+.about-resume__img {
+  width: 637px;
+  height: auto;
+  display: block;
+}
+
+/* Overlay reserved for the paper area — no hover effect */
+.about-resume__paper {
+  position: absolute;
+  left: 2%;
+  top: 36%;
+  width: 23%;
+  height: 45%;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+/* ========================================
+   RESPONSIVE — TABLET (≤1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .about-portrait__img {
+    width: 90%;
+    height: auto;
+  }
+
+  .about-text,
+  .about-skills,
+  .about-tools {
+    width: 90%;
+  }
+
+  .about-section-header--padded {
+    width: 90%;
+  }
+
+  .skills-row {
+    flex-wrap: wrap;
+    gap: 12px !important;
+  }
+
+  .tools-row {
+    flex-wrap: wrap;
+    gap: 24px !important;
+  }
+
+  .funivity-stack {
+    height: 1200px;
+  }
+
+  .funivity-stack.unstacked .funivity-card:nth-child(1) {
+    transform: translate(-205px, -260px) rotate(0deg);
+  }
+  .funivity-stack.unstacked .funivity-card:nth-child(2) {
+    transform: translate(205px, -260px) rotate(0deg);
+  }
+  .funivity-stack.unstacked .funivity-card:nth-child(3) {
+    transform: translate(205px, 260px) rotate(0deg);
+  }
+  .funivity-stack.unstacked .funivity-card:nth-child(4) {
+    transform: translate(-205px, 260px) rotate(0deg);
+  }
+
+  .about-resume__wrapper {
+    width: 90%;
+  }
+
+  .about-resume__img,
+  .about-resume__wrapper {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .about-portrait {
+    padding-top: 120px;
+    padding-bottom: 48px;
+  }
+
+  .about-portrait__img {
+    width: calc(100% - 48px);
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .about-text,
+  .about-skills,
+  .about-tools {
+    width: calc(100% - 48px);
+    padding: 0 0 48px;
+  }
+
+  .about-section-header--padded {
+    width: calc(100% - 48px);
+  }
+
+  .about-text__body p {
+    font-size: 18px;
+  }
+
+  .skill-badge__text {
+    font-size: 16px;
+  }
+
+  .tool-card {
+    width: 130px;
+    height: auto;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .tool-card__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tool-card__label {
+    font-size: 16px;
+  }
+
+  .funivity-stack {
+    height: auto;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 24px;
+  }
+
+  .funivity-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0;
+    transform: none !important;
+    z-index: 1 !important;
+    width: 100%;
+    max-width: 340px;
+    display: none;
+  }
+
+  .funivity-card:nth-child(1) {
+    display: flex;
+    transform: rotate(-3deg) !important;
+  }
+
+  .funivity-stack.unstacked .funivity-card {
+    display: flex;
+    position: relative;
+    transform: none !important;
+    margin-bottom: 24px;
+  }
+
+  .funivity-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .funivity-hint {
+    margin-top: 16px;
+  }
+}

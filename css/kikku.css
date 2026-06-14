@@ -1,0 +1,937 @@
+/* ========================================
+   KIKKU CASE STUDY PAGE STYLES
+   Accent: #FA7319 (orange)
+   Background: #EBEBEB (site default)
+   ======================================== */
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+
+.cs-page-header {
+  padding-top: 180px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.cs-page-title {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.2;
+  color: #1C1C1C;
+  margin-bottom: 16px;
+}
+
+.cs-page-subtitle {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+/* ========================================
+   HERO IMAGE
+   ======================================== */
+
+.cs-hero {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 80px;
+}
+
+.cs-hero__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 912px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #FA7319;
+  aspect-ratio: 912 / 648;
+}
+
+.cs-hero__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-hero__mockup {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========================================
+   TWO-COLUMN LAYOUT: TOC + CONTENT
+   ======================================== */
+
+.cs-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1322px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+
+/* ========================================
+   TOC SIDEBAR
+   Scrolls WITH the page (not sticky)
+   ======================================== */
+
+.cs-toc {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.cs-toc__label {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999999;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cs-toc__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-toc__link {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+  display: block;
+}
+
+.cs-toc__link:hover {
+  color: #FA7319;
+  background: rgba(250, 115, 25, 0.08);
+}
+
+.cs-toc__link--sub {
+  padding-left: 28px;
+  font-size: 15px;
+  color: #888888;
+}
+
+.cs-toc__link--sub:hover {
+  color: #FA7319;
+}
+
+/* ========================================
+   CONTENT COLUMN
+   ======================================== */
+
+.cs-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ========================================
+   SECTION SHARED STYLES
+   ======================================== */
+
+.cs-section {
+  scroll-margin-top: 100px;
+}
+
+.cs-section--sub {
+  border-left: 3px solid #FA7319;
+  padding-left: 24px;
+  scroll-margin-top: 100px;
+}
+
+.cs-section__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.cs-star {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cs-star--green {
+  filter: hue-rotate(140deg) saturate(1.3) brightness(0.9);
+}
+
+.cs-star--yellow {
+  filter: brightness(1.1) hue-rotate(20deg);
+}
+
+.cs-section__title {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #1C1C1C;
+}
+
+.cs-subsection__title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #1C1C1C;
+  margin-bottom: 16px;
+}
+
+.cs-section__intro {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 40px;
+  max-width: 680px;
+}
+
+/* ========================================
+   OVERVIEW SECTION
+   ======================================== */
+
+.cs-overview__meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.cs-meta-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 0.5px solid #D8D8D8;
+}
+
+.cs-meta-card__label {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FA7319;
+}
+
+.cs-meta-card__value {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1C1C1C;
+}
+
+.cs-meta-card__value--status {
+  color: #16A34A;
+}
+
+.cs-overview__summary {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 32px 36px;
+  border: 0.5px solid #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-overview__summary-title {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 400;
+  font-size: 28px;
+  color: #FA7319;
+}
+
+.cs-overview__summary-text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #333333;
+}
+
+/* ========================================
+   HIGHLIGHTS SECTION
+   ======================================== */
+
+.cs-highlights__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-highlights__row {
+  display: flex;
+  gap: 20px;
+}
+
+.cs-highlights__row--full {
+  width: 100%;
+}
+
+.cs-highlights__row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs-highlights__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================================
+   PROBLEM STATEMENT SECTION
+   ======================================== */
+
+.cs-problem__layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.cs-problem__image-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-problem__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.cs-problem__card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px;
+  border: 0.5px solid #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-problem__card-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1C1C1C;
+}
+
+.cs-problem__card-text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444444;
+}
+
+.cs-problem__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cs-tag {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #FA7319;
+  background: rgba(250, 115, 25, 0.1);
+  border-radius: 100px;
+  padding: 5px 14px;
+}
+
+/* ========================================
+   SOLUTION SECTION
+   ======================================== */
+
+.cs-solution__layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.cs-solution__card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px;
+  border: 0.5px solid #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-solution__card-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1C1C1C;
+}
+
+.cs-solution__card-text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444444;
+}
+
+.cs-solution__outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cs-outcome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs-outcome__icon {
+  width: 22px;
+  height: 22px;
+  background: #FA7319;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cs-outcome__text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+}
+
+.cs-solution__image-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-solution__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ========================================
+   DESIGN PROCESS — 5-STEP ZIGZAG
+   ======================================== */
+
+.cs-process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 64px;
+}
+
+.cs-process__step {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.cs-process__step:last-child {
+  border-bottom: none;
+}
+
+.cs-process__step--right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.cs-process__step--right .cs-process__step-content {
+  align-items: flex-end;
+}
+
+.cs-process__step-number {
+  font-family: 'Emilys Candy', cursive;
+  font-size: 80px;
+  font-weight: 400;
+  color: #FA7319;
+  opacity: 0.25;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 100px;
+  text-align: center;
+}
+
+.cs-process__step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cs-process__step-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1C1C1C;
+}
+
+.cs-process__step-text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555555;
+  max-width: 520px;
+}
+
+.cs-process__step--right .cs-process__step-text {
+  margin-left: auto;
+}
+
+/* Circular Process Diagram */
+.cs-process__diagram {
+  display: flex;
+  justify-content: center;
+}
+
+.cs-process__diagram-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ========================================
+   WIREFRAMES SECTION
+   ======================================== */
+
+.cs-screens__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cs-screens__grid--two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.cs-screens__grid--three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cs-screen__img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================
+   VISUAL DESIGN SECTION
+   ======================================== */
+
+.cs-visual__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-visual__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ========================================
+   USER RESEARCH SECTION
+   ======================================== */
+
+.cs-research__layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.cs-research__image-wrap {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.cs-research__photo {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.cs-research__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-research__stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.cs-research__stat-row:last-of-type {
+  border-bottom: none;
+}
+
+.cs-research__stat-num {
+  font-family: 'Emilys Candy', cursive;
+  font-size: 56px;
+  font-weight: 400;
+  color: #FA7319;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cs-research__stat-label {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #444444;
+}
+
+.cs-research__insight {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555555;
+  font-style: italic;
+  padding: 16px 20px;
+  border-left: 3px solid #FA7319;
+  background: rgba(250, 115, 25, 0.05);
+  border-radius: 0 12px 12px 0;
+}
+
+/* User Personas within Research section */
+.cs-personas__heading {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 400;
+  font-size: 32px;
+  color: #1C1C1C;
+  margin-bottom: 16px;
+}
+
+.cs-persona {
+  scroll-margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.cs-persona__img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+/* ========================================
+   RESEARCH SUMMARY SECTION
+   ======================================== */
+
+.cs-stats__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.cs-stat__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.cs-summary__image-wrap {
+  width: 100%;
+}
+
+.cs-summary__img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+/* ========================================
+   RESPONSIVE — TABLET (≤1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .cs-page-title {
+    font-size: 48px;
+  }
+
+  .cs-page-subtitle {
+    font-size: 22px;
+  }
+
+  .cs-hero {
+    padding: 0 24px 60px;
+  }
+
+  .cs-layout {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 24px 80px;
+  }
+
+  .cs-toc {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 48px;
+    border: 0.5px solid #D8D8D8;
+  }
+
+  .cs-toc__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cs-toc__link {
+    font-size: 14px;
+    padding: 5px 12px;
+    background: #F5F5F5;
+    border-radius: 100px;
+  }
+
+  .cs-toc__link--sub {
+    padding-left: 12px;
+    font-size: 13px;
+  }
+
+  .cs-overview__meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .cs-problem__layout,
+  .cs-solution__layout {
+    flex-direction: column;
+  }
+
+  .cs-solution__layout {
+    flex-direction: column-reverse;
+  }
+
+  .cs-process__step-number {
+    font-size: 60px;
+    width: 70px;
+  }
+
+  .cs-research__layout {
+    flex-direction: column;
+  }
+
+  .cs-research__image-wrap {
+    width: 100%;
+  }
+
+  .cs-screens__grid--three {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cs-stats__row {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .cs-page-header {
+    padding-top: 130px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cs-page-title {
+    font-size: 36px;
+  }
+
+  .cs-page-subtitle {
+    font-size: 18px;
+  }
+
+  .cs-hero {
+    padding: 0 16px 48px;
+  }
+
+  .cs-hero__wrapper {
+    border-radius: 20px;
+  }
+
+  .cs-layout {
+    padding: 0 16px 60px;
+  }
+
+  .cs-toc {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  .cs-toc__link {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .cs-content {
+    gap: 60px;
+  }
+
+  .cs-section__title {
+    font-size: 32px;
+  }
+
+  .cs-section__intro {
+    font-size: 17px;
+  }
+
+  .cs-overview__meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cs-meta-card {
+    padding: 16px;
+  }
+
+  .cs-meta-card__value {
+    font-size: 15px;
+  }
+
+  .cs-overview__summary {
+    padding: 24px 20px;
+  }
+
+  .cs-overview__summary-text {
+    font-size: 16px;
+  }
+
+  .cs-highlights__row--two {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-problem__card,
+  .cs-solution__card {
+    padding: 20px;
+  }
+
+  .cs-problem__card-text,
+  .cs-solution__card-text {
+    font-size: 16px;
+  }
+
+  .cs-process__step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .cs-process__step--right {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cs-process__step--right .cs-process__step-content {
+    align-items: flex-start;
+  }
+
+  .cs-process__step--right .cs-process__step-text {
+    margin-left: 0;
+  }
+
+  .cs-process__step-number {
+    font-size: 48px;
+    width: auto;
+  }
+
+  .cs-process__step-title {
+    font-size: 20px;
+  }
+
+  .cs-process__step-text {
+    font-size: 15px;
+  }
+
+  .cs-screens__grid--two,
+  .cs-screens__grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-research__stat-num {
+    font-size: 40px;
+  }
+
+  .cs-research__stat-label {
+    font-size: 16px;
+  }
+
+  .cs-stats__row {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-personas__heading {
+    font-size: 26px;
+  }
+}

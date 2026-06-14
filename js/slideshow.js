@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
   var track = document.querySelector('.slideshow__track');
-  var viewport = document.querySelector('.slideshow__viewport');
   var section = document.querySelector('.slideshow');
 
-  if (!track || !viewport || !section) return;
+  if (!track || !section) return;
 
   var slides = Array.from(track.children);
   var gap = 24;
   var scrollPos = 0;
   var animationId = null;
   var isVisible = false;
+  var speed = 1;
 
+  // Clone slides for seamless infinite loop
   slides.forEach(function (slide) {
     var clone = slide.cloneNode(true);
     track.appendChild(clone);
   });
 
-  function getSlideWidth() {
-    if (slides.length === 0) return 624;
-    return slides[0].offsetWidth + gap;
+  function getSetWidth() {
+    if (slides.length === 0) return 0;
+    return slides.reduce(function (total, slide) {
+      return total + slide.offsetWidth + gap;
+    }, 0);
   }
 
   function animateScroll() {
@@ -27,12 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    scrollPos += 0.8;
-    var slideW = getSlideWidth();
-    var resetPoint = slides.length * slideW;
+    scrollPos += speed;
 
-    if (scrollPos >= resetPoint) {
-      scrollPos = 0;
+    var setWidth = getSetWidth();
+    if (setWidth > 0 && scrollPos >= setWidth) {
+      scrollPos -= setWidth;
     }
 
     track.style.transform = 'translateX(-' + scrollPos + 'px)';
@@ -48,6 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       } else {
         isVisible = false;
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
       }
     });
   }, { threshold: 0.1 });

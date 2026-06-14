@@ -21,13 +21,14 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Scroll indicator — smooth scroll to projects
-document.querySelector('.scroll-indicator')
-  .addEventListener('click', function(e) {
+// Scroll indicator — smooth scroll to projects (home page only)
+var scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
+  scrollIndicator.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector('#projects')
-      .scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
   });
+}
 
 // Nav scroll background
 document.addEventListener('DOMContentLoaded', function () {
