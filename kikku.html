@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kikuu E-commerce Platform — Case Study by Omotoyosi Bamigboye, Product Designer.">
-  <title>Kikuu Case Study — Toyo's Creative Space</title>
+  <meta name="description" content="Kikku E-commerce Platform Case Study — Omotoyosi Bamigboye, Product Designer.">
+  <title>Kikku Case Study — Toyo's Creative Space</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/kikku.css">
@@ -15,7 +15,7 @@
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Mobile Menu Overlay -->
+  <!-- Mobile Menu Overlay — exact copy from index.html, hrefs updated for sub-page -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <a href="index.html#projects" class="mobile-menu__link">Works</a>
     <a href="about.html" class="mobile-menu__link">About</a>
@@ -23,10 +23,12 @@
     <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation — exact copy from index.html; Works link gets active state -->
   <header>
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html" class="nav__logo"><img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space home"></a>
+      <a href="index.html" class="nav__logo">
+        <img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space home">
+      </a>
       <div class="nav__links">
         <a href="index.html#projects" class="nav__link nav__link--active">Works</a>
         <a href="about.html" class="nav__link">About</a>
@@ -45,344 +47,421 @@
 
   <main id="main-content">
 
-    <!-- PAGE HEADER -->
-    <section class="cs-page-header">
-      <h1 class="cs-page-title">Kikuu E-commerce Platform</h1>
-      <p class="cs-page-subtitle">A Freelancing and Side Gigs Platform</p>
-    </section>
+    <!-- ============================================================
+         PAGE TITLE — centred, above the two-column grid
+         ============================================================ -->
+    <div class="cs-page-title-wrap">
+      <h1 class="cs-page-title">Kikku E-commerce Platform</h1>
+      <p class="cs-page-subtitle">An e-commerce shopping platform</p>
+    </div>
 
-    <!-- HERO IMAGE -->
-    <section class="cs-hero" aria-label="Kikuu project hero image">
-      <div class="cs-hero__wrapper">
-        <img src="kikku-project/kikku image.png" alt="Kikuu e-commerce platform design overview" class="cs-hero__bg">
-        <img src="kikku-project/mockup frame.png" alt="" class="cs-hero__mockup" aria-hidden="true">
-      </div>
-    </section>
+    <!-- ============================================================
+         TWO-COLUMN LAYOUT
+         Left (1fr): hero image first, then all case-study sections
+         Right (320px): sticky table-of-contents — visible from top
+         ============================================================ -->
+    <div class="case-study-layout">
 
-    <!-- MAIN LAYOUT: TOC + CONTENT -->
-    <div class="cs-layout">
+      <!-- ── LEFT: MAIN CONTENT ───────────────────────────────── -->
+      <div class="cs-main-content">
 
-      <!-- TOC SIDEBAR (scrolls with page, NOT sticky) -->
-      <aside class="cs-toc" aria-label="Case study table of contents">
-        <span class="cs-toc__label">Contents</span>
-        <nav class="cs-toc__nav">
-          <a href="#overview" class="cs-toc__link">01 &nbsp; Overview</a>
-          <a href="#highlights" class="cs-toc__link">02 &nbsp; Project Highlights</a>
-          <a href="#challenges" class="cs-toc__link">03 &nbsp; Problem Statement</a>
-          <a href="#solutions" class="cs-toc__link">04 &nbsp; Solution</a>
-          <a href="#design-process" class="cs-toc__link">05 &nbsp; Design Process</a>
-          <a href="#wireframes" class="cs-toc__link cs-toc__link--sub">06 &nbsp; Wireframes</a>
-          <a href="#visual-design" class="cs-toc__link cs-toc__link--sub">07 &nbsp; Visual Design</a>
-          <a href="#key-screens" class="cs-toc__link cs-toc__link--sub">08 &nbsp; Key Screens</a>
-          <a href="#user-research" class="cs-toc__link">09 &nbsp; User Research</a>
-          <a href="#persona-zainab" class="cs-toc__link cs-toc__link--sub">10 &nbsp; Zainab Aliyu</a>
-          <a href="#persona-michael" class="cs-toc__link cs-toc__link--sub">11 &nbsp; Michael Okonkwo</a>
-          <a href="#research-summary" class="cs-toc__link">12 &nbsp; Research Summary</a>
-        </nav>
-      </aside>
+        <!-- Hero image: first thing in the left column, beside the TOC -->
+        <div class="cs-hero-image-wrap">
+          <img
+            src="kikku-project/kikku image.png"
+            alt="Kikku e-commerce platform — hero design overview"
+            class="cs-hero-image"
+            loading="eager"
+          >
+        </div>
 
-      <!-- CASE STUDY CONTENT -->
-      <div class="cs-content">
-
-        <!-- ============================================================
-             SECTION 01: OVERVIEW
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 1 — OVERVIEW  |  Star: green
+             ====================================================== -->
         <section id="overview" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/blue star.png" alt="" class="cs-star cs-star--green" aria-hidden="true">
+            <img src="kikku-project/green star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Overview</h2>
           </div>
 
-          <!-- Metadata Grid -->
-          <div class="cs-overview__meta">
-            <div class="cs-meta-card">
-              <span class="cs-meta-card__label">Role</span>
-              <span class="cs-meta-card__value">Product Designer</span>
+          <div class="cs-overview">
+            <div class="cs-overview__item">
+              <p class="cs-overview__label">Role- Collaboration</p>
+              <p class="cs-overview__value">UI/UX Designer, UX Researcher</p>
             </div>
-            <div class="cs-meta-card">
-              <span class="cs-meta-card__label">Timeline</span>
-              <span class="cs-meta-card__value">3 Months</span>
+            <div class="cs-overview__item">
+              <p class="cs-overview__label">Timeline</p>
+              <p class="cs-overview__value">Oct-Nov. 2025</p>
             </div>
-            <div class="cs-meta-card">
-              <span class="cs-meta-card__label">Status</span>
-              <span class="cs-meta-card__value cs-meta-card__value--status">Completed</span>
+            <div class="cs-overview__item">
+              <p class="cs-overview__label">Status</p>
+              <p class="cs-overview__value">In Development</p>
             </div>
-            <div class="cs-meta-card">
-              <span class="cs-meta-card__label">Deliverables</span>
-              <span class="cs-meta-card__value">UX Research · Wireframes · Prototype · Visual Design</span>
+            <div class="cs-overview__item">
+              <p class="cs-overview__label">Deliverables</p>
+              <p class="cs-overview__value">User flow, Wireframes, UX Research, High Fidelity Prototypes, Visual Design</p>
             </div>
-          </div>
-
-          <!-- Summary -->
-          <div class="cs-overview__summary">
-            <h3 class="cs-overview__summary-title">Summary</h3>
-            <p class="cs-overview__summary-text">Kikuu is one of Africa's fastest-growing e-commerce platforms, connecting buyers and sellers across multiple African countries. The platform enables everyday entrepreneurs to set up shops and reach customers far beyond their local market — making it a hub for freelancers, small business owners, and side hustlers.</p>
-            <p class="cs-overview__summary-text">This project involved a comprehensive redesign of the Kikuu mobile experience, focusing on three key areas: improving product discoverability with smarter search and categories, streamlining the checkout flow to reduce abandonment, and introducing real-time delivery tracking so buyers always know where their order is.</p>
+            <div class="cs-overview__item">
+              <p class="cs-overview__label">Summary</p>
+              <p class="cs-overview__value">Kikku is an e-commerce platform designed to make online shopping in Africa simple and accessible. Users can browse through a wide range of products and get items delivered directly to their homes.</p>
+              <p class="cs-overview__value">Recently, user feedback revealed two major pain points: difficulty in discovering products and frustration with unclear delivery tracking. These challenges led to a redesign aimed at improving both product discovery and delivery transparency, ensuring a smoother and more reliable shopping experience.</p>
+            </div>
           </div>
         </section>
 
-        <!-- ============================================================
-             SECTION 02: PROJECT HIGHLIGHTS
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 2 — HIGHLIGHTS  |  Star: pink
+             ====================================================== -->
         <section id="highlights" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/pink star.png" alt="" class="cs-star" aria-hidden="true">
-            <h2 class="cs-section__title">Project Highlights</h2>
+            <img src="about-assets/pink star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Highlights</h2>
           </div>
-          <p class="cs-section__intro">A peek into some of the key screens and interactions designed for the Kikuu mobile experience.</p>
-
-          <div class="cs-highlights__grid">
-            <div class="cs-highlights__row cs-highlights__row--full">
-              <img src="kikku-project/works details one.png" alt="Kikuu product browsing and discovery screens" class="cs-highlights__img" loading="lazy">
-            </div>
-            <div class="cs-highlights__row cs-highlights__row--two">
-              <img src="kikku-project/work details two.png" alt="Kikuu checkout and payment flow" class="cs-highlights__img" loading="lazy">
-              <img src="kikku-project/works details three.png" alt="Kikuu order tracking and delivery" class="cs-highlights__img" loading="lazy">
-            </div>
-          </div>
+          <img
+            src="kikku-project/mockup frame.png"
+            alt="Kikku app highlights — key screens and mockup"
+            class="cs-full-image"
+            loading="lazy"
+          >
         </section>
 
-        <!-- ============================================================
-             SECTION 03: PROBLEM STATEMENT
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 3 — CHALLENGES  |  Star: orange
+             Layout: text LEFT, image RIGHT
+             ====================================================== -->
         <section id="challenges" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/orange star.png" alt="" class="cs-star cs-star--yellow" aria-hidden="true">
-            <h2 class="cs-section__title">Problem Statement</h2>
+            <img src="about-assets/orange star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Challenges</h2>
           </div>
-
-          <div class="cs-problem__layout">
-            <div class="cs-problem__image-wrap">
-              <img src="kikku-project/problem.png" alt="Problem statement illustration" class="cs-problem__img" loading="lazy">
-            </div>
-            <div class="cs-problem__card">
-              <h3 class="cs-problem__card-title">The Challenge</h3>
-              <p class="cs-problem__card-text">Kikuu's existing mobile app created significant friction for users trying to shop. Product search returned irrelevant results, the category structure was overwhelming with 200+ top-level categories, and the checkout process stretched across 7 steps — leading to high cart abandonment rates.</p>
-              <p class="cs-problem__card-text">Buyers also had zero visibility into their order status after purchasing, causing anxiety and a flood of customer support tickets asking "Where is my order?"</p>
-              <div class="cs-problem__tags">
-                <span class="cs-tag">Poor Discoverability</span>
-                <span class="cs-tag">Complex Checkout</span>
-                <span class="cs-tag">No Order Tracking</span>
-              </div>
-            </div>
-          </div>
+          <img
+            src="kikku-project/problem.png"
+            alt="Challenges: difficulty finding products and unreliable delivery tracking"
+            class="cs-full-image"
+            loading="lazy"
+          >
         </section>
 
-        <!-- ============================================================
-             SECTION 04: SOLUTION
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 4 — SOLUTIONS  |  Star: blue
+             Layout: image LEFT, text RIGHT
+             ====================================================== -->
         <section id="solutions" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/blue star.png" alt="" class="cs-star cs-star--green" aria-hidden="true">
-            <h2 class="cs-section__title">Solution</h2>
+            <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Solutions</h2>
           </div>
+          <img
+            src="kikku-project/solution.png"
+            alt="Solutions: improved delivery tracking and product discovery"
+            class="cs-full-image"
+            loading="lazy"
+          >
+        </section>
 
-          <div class="cs-solution__layout">
-            <div class="cs-solution__card">
-              <h3 class="cs-solution__card-title">How We Solved It</h3>
-              <p class="cs-solution__card-text">We introduced smart search with auto-suggestions and visual filters, restructured categories into 12 intuitive groups with visual icons, and cut checkout down to 3 clear steps.</p>
-              <p class="cs-solution__card-text">The crown jewel of the redesign was a live delivery tracking map — buyers can now watch their order move in real time, from the seller's location to their doorstep.</p>
-              <div class="cs-solution__outcomes">
-                <div class="cs-outcome">
-                  <span class="cs-outcome__icon">✓</span>
-                  <span class="cs-outcome__text">Smarter search & category navigation</span>
-                </div>
-                <div class="cs-outcome">
-                  <span class="cs-outcome__icon">✓</span>
-                  <span class="cs-outcome__text">3-step simplified checkout</span>
-                </div>
-                <div class="cs-outcome">
-                  <span class="cs-outcome__icon">✓</span>
-                  <span class="cs-outcome__text">Live delivery tracking with map</span>
-                </div>
-              </div>
-            </div>
-            <div class="cs-solution__image-wrap">
-              <img src="kikku-project/solution.png" alt="Solution design screens" class="cs-solution__img" loading="lazy">
-            </div>
+        <!-- ======================================================
+             SECTION 5 — USER PERSONAS  |  Star: blue
+             ====================================================== -->
+        <section id="user-personas" class="cs-section">
+          <div class="cs-section__header">
+            <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">User Personas</h2>
+          </div>
+          <div class="cs-personas-stack">
+            <img
+              src="kikku-project/User profile 1.png"
+              alt="User persona: Zainab Mohammed — 40 years old, stay at home mom, Abuja, Nigeria"
+              class="cs-full-image"
+              loading="lazy"
+            >
+            <img
+              src="kikku-project/User profile 2.png"
+              alt="User persona: Michael Adebayo — 33 years old, City Lawyer, Ibadan, Nigeria"
+              class="cs-full-image"
+              loading="lazy"
+            >
           </div>
         </section>
 
-        <!-- ============================================================
-             SECTION 05: DESIGN PROCESS
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 6 — DESIGN PROCESS  |  Star: orange
+             ====================================================== -->
         <section id="design-process" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/blue star.png" alt="" class="cs-star" aria-hidden="true">
+            <img src="about-assets/orange star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Design Process</h2>
           </div>
-          <p class="cs-section__intro">I followed a double-diamond design process — diverging to explore problems and possibilities before converging on refined, tested solutions.</p>
 
-          <!-- 5-step zigzag -->
-          <div class="cs-process__steps">
+          <p class="cs-intro-text">To ensure the design directly addressed users' needs, we conducted research to uncover the challenges around product discovery and delivery tracking. The insights gathered from this process guided the redesign and helped us create a more seamless shopping experience.</p>
 
-            <div class="cs-process__step cs-process__step--left">
-              <div class="cs-process__step-number">01</div>
-              <div class="cs-process__step-content">
-                <h3 class="cs-process__step-title">Empathize</h3>
-                <p class="cs-process__step-text">Conducted 15 in-depth user interviews with active Kikuu buyers and sellers. Ran a competitive analysis across 6 African e-commerce apps to benchmark the experience landscape.</p>
+          <div class="dp-steps">
+
+            <!-- STEP 1: card LEFT, heading RIGHT -->
+            <div class="dp-step">
+              <div class="dp-step__card">
+                <p class="dp-step__card-text">We reviewed existing data and competitor platforms, then set clear questions to guide our study, questions like: "Where do users get stuck in finding a product?" "What information in tracking builds trust?"</p>
+              </div>
+              <div class="dp-step__title-wrap">
+                <span class="dp-step__num">STEP 1</span>
+                <h3 class="dp-step__heading">Defining Research<br>Questions</h3>
               </div>
             </div>
 
-            <div class="cs-process__step cs-process__step--right">
-              <div class="cs-process__step-content">
-                <h3 class="cs-process__step-title">Define</h3>
-                <p class="cs-process__step-text">Synthesized interview data into user journey maps, affinity diagrams, and a clear problem statement. Identified 3 critical pain points that were causing the most user drop-off.</p>
-              </div>
-              <div class="cs-process__step-number">02</div>
+            <!-- Arrow: desc was LEFT → goes left-to-right toward next desc on RIGHT (normal) -->
+            <div class="dp-connector" aria-hidden="true">
+              <img src="kikku-project/orange arrow.png" class="dp-arrow" alt="">
             </div>
 
-            <div class="cs-process__step cs-process__step--left">
-              <div class="cs-process__step-number">03</div>
-              <div class="cs-process__step-content">
-                <h3 class="cs-process__step-title">Ideate</h3>
-                <p class="cs-process__step-text">Ran 3 design sprint sessions with stakeholders, generating 60+ solution ideas. Prioritised ideas using an impact vs effort matrix, picking the top 8 concepts to explore further.</p>
+            <!-- STEP 2: heading LEFT, description RIGHT -->
+            <div class="dp-step">
+              <div class="dp-step__title-wrap">
+                <span class="dp-step__num">STEP 2</span>
+                <h3 class="dp-step__heading">Usability Testing</h3>
               </div>
-            </div>
-
-            <div class="cs-process__step cs-process__step--right">
-              <div class="cs-process__step-content">
-                <h3 class="cs-process__step-title">Prototype</h3>
-                <p class="cs-process__step-text">Built low-fidelity wireframes in Figma, iterated to high-fidelity prototypes with complete interaction flows covering search, checkout, and order tracking.</p>
-              </div>
-              <div class="cs-process__step-number">04</div>
-            </div>
-
-            <div class="cs-process__step cs-process__step--left">
-              <div class="cs-process__step-number">05</div>
-              <div class="cs-process__step-content">
-                <h3 class="cs-process__step-title">Test & Iterate</h3>
-                <p class="cs-process__step-text">Conducted moderated usability testing sessions with 20 participants. Gathered qualitative and quantitative data, then iterated through 2 more design rounds before final handoff.</p>
+              <div class="dp-step__card">
+                <p class="dp-step__card-text">We ran usability tests with real users and observed them completing key tasks in the app to uncover navigation and tracking issues.</p>
               </div>
             </div>
 
-          </div>
-
-          <!-- Circular Process Diagram -->
-          <div class="cs-process__diagram">
-            <img src="kikku-project/Design overview.png" alt="Kikuu design process overview diagram" class="cs-process__diagram-img" loading="lazy">
-          </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 06: WIREFRAMES (sub-section of Design Process)
-             ============================================================ -->
-        <section id="wireframes" class="cs-section cs-section--sub">
-          <h3 class="cs-subsection__title">Wireframes</h3>
-          <p class="cs-section__intro">From rough sketches to structured low-fidelity wireframes, exploring layout and flow before committing to visual design.</p>
-          <div class="cs-screens__grid cs-screens__grid--two">
-            <img src="kikku-project/Home.png" alt="Home screen wireframe" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Search.png" alt="Search screen wireframe" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Order list.png" alt="Order list wireframe" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Product page.png" alt="Product page wireframe" class="cs-screen__img" loading="lazy">
-          </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 07: VISUAL DESIGN (sub-section of Design Process)
-             ============================================================ -->
-        <section id="visual-design" class="cs-section cs-section--sub">
-          <h3 class="cs-subsection__title">Visual Design</h3>
-          <p class="cs-section__intro">Building a cohesive design language — from colour palette and typography to component library and brand expression.</p>
-          <div class="cs-visual__grid">
-            <img src="kikku-project/brand design.png" alt="Kikuu brand design system" class="cs-visual__img" loading="lazy">
-            <img src="kikku-project/colors.png" alt="Kikuu colour palette" class="cs-visual__img" loading="lazy">
-          </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 08: KEY SCREENS (sub-section of Design Process)
-             ============================================================ -->
-        <section id="key-screens" class="cs-section cs-section--sub">
-          <h3 class="cs-subsection__title">Key Screens</h3>
-          <p class="cs-section__intro">The final high-fidelity screens — polished, responsive, and ready for handoff.</p>
-          <div class="cs-screens__grid cs-screens__grid--three">
-            <img src="kikku-project/Search and categories.png" alt="Search and categories screen" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Product Section 2.png" alt="Product detail screen" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/kikku mockup second.png" alt="Kikuu app mockup" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/kikku order screen.png" alt="Order screen" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Live Map.png" alt="Live delivery map screen" class="cs-screen__img" loading="lazy">
-            <img src="kikku-project/Delivery timeline.png" alt="Delivery timeline screen" class="cs-screen__img" loading="lazy">
-          </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 09: USER RESEARCH
-             ============================================================ -->
-        <section id="user-research" class="cs-section">
-          <div class="cs-section__header">
-            <img src="about-assets/blue star.png" alt="" class="cs-star" aria-hidden="true">
-            <h2 class="cs-section__title">User Research</h2>
-          </div>
-          <p class="cs-section__intro">Before touching Figma, I spent two weeks talking to real users — buyers who shopped weekly on Kikuu and sellers managing their storefronts from their phones.</p>
-
-          <div class="cs-research__layout">
-            <div class="cs-research__image-wrap">
-              <img src="kikku-project/woman holding phone.png" alt="User research — woman using mobile app" class="cs-research__photo" loading="lazy">
+            <!-- Arrow: desc was RIGHT → goes right-to-left toward next desc on LEFT (flipped) -->
+            <div class="dp-connector" aria-hidden="true">
+              <img src="kikku-project/orange arrow.png" class="dp-arrow dp-arrow--flip" alt="">
             </div>
-            <div class="cs-research__details">
-              <div class="cs-research__stat-row">
-                <span class="cs-research__stat-num">15</span>
-                <span class="cs-research__stat-label">User interviews conducted</span>
+
+            <!-- STEP 3: description LEFT, heading RIGHT -->
+            <div class="dp-step">
+              <div class="dp-step__card">
+                <p class="dp-step__card-text">We conducted interviews where we spoke with users to understand their expectations, frustrations, and mental models.</p>
               </div>
-              <div class="cs-research__stat-row">
-                <span class="cs-research__stat-num">150+</span>
-                <span class="cs-research__stat-label">Survey responses collected</span>
+              <div class="dp-step__title-wrap">
+                <span class="dp-step__num">STEP 3</span>
+                <h3 class="dp-step__heading">User Interviews</h3>
               </div>
-              <div class="cs-research__stat-row">
-                <span class="cs-research__stat-num">6</span>
-                <span class="cs-research__stat-label">Competitor apps analysed</span>
-              </div>
-              <p class="cs-research__insight">Key insight: users trusted the platform but felt the experience was "stressful" and "confusing." They wanted simplicity — not more features.</p>
             </div>
+
+            <!-- Arrow: desc was LEFT → goes left-to-right toward next desc on RIGHT (normal) -->
+            <div class="dp-connector" aria-hidden="true">
+              <img src="kikku-project/orange arrow.png" class="dp-arrow" alt="">
+            </div>
+
+            <!-- STEP 4: heading LEFT, description RIGHT -->
+            <div class="dp-step">
+              <div class="dp-step__title-wrap">
+                <span class="dp-step__num">STEP 4</span>
+                <h3 class="dp-step__heading">Personas &amp; Insights</h3>
+              </div>
+              <div class="dp-step__card">
+                <p class="dp-step__card-text">We synthesized findings into key pain points and created personas to represent user needs.</p>
+              </div>
+            </div>
+
+            <!-- Arrow: desc was RIGHT → goes right-to-left toward next desc on LEFT (flipped) -->
+            <div class="dp-connector" aria-hidden="true">
+              <img src="kikku-project/orange arrow.png" class="dp-arrow dp-arrow--flip" alt="">
+            </div>
+
+            <!-- STEP 5: card LEFT, heading RIGHT -->
+            <div class="dp-step">
+              <div class="dp-step__card">
+                <p class="dp-step__card-text">We analyzed successful e-commerce apps to learn best practices in product discovery and tracking.</p>
+              </div>
+              <div class="dp-step__title-wrap">
+                <span class="dp-step__num">STEP 5</span>
+                <h3 class="dp-step__heading">Competitive Study</h3>
+              </div>
+            </div>
+
           </div>
 
-          <!-- User Personas heading -->
-          <h3 class="cs-personas__heading">User Personas</h3>
-          <p class="cs-section__intro">Meet the two primary user types that shaped every design decision.</p>
-
-          <!-- PERSONA 1: ZAINAB -->
-          <div id="persona-zainab" class="cs-persona">
-            <img src="kikku-project/User profile 1.png" alt="User persona: Zainab Aliyu" class="cs-persona__img" loading="lazy">
-          </div>
-
-          <!-- PERSONA 2: MICHAEL -->
-          <div id="persona-michael" class="cs-persona">
-            <img src="kikku-project/User profile 2.png" alt="User persona: Michael Okonkwo" class="cs-persona__img" loading="lazy">
+          <!-- HOW WE SOLVED THE PROBLEM — diagram image, clipped to remove grey circle artifact -->
+          <div class="dp-solved-clip">
+            <img
+              src="kikku-project/how we solved.png"
+              alt="How we solved the problem — Our Process: Research, Ideation and Planning, Design and Prototyping, Testing"
+              class="dp-solved-img"
+              loading="lazy"
+            >
           </div>
 
         </section>
 
-        <!-- ============================================================
-             SECTION 12: RESEARCH SUMMARY
-             ============================================================ -->
+        <!-- ======================================================
+             SECTION 7 — RESEARCH SUMMARY  |  image composite
+             ====================================================== -->
+        <!-- ======================================================
+             SECTION 7 — RESEARCH SUMMARY  |  Star: blue
+             ====================================================== -->
         <section id="research-summary" class="cs-section">
           <div class="cs-section__header">
-            <img src="about-assets/blue star.png" alt="" class="cs-star" aria-hidden="true">
+            <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
             <h2 class="cs-section__title">Research Summary</h2>
           </div>
-          <p class="cs-section__intro">After synthesising insights from interviews, surveys, and usability sessions, three data points emerged that defined the design direction for the entire project.</p>
+          <p class="cs-intro-text">We interviewed over 15 Kikku users to understand their struggles with product discovery and delivery tracking. Their feedback revealed frustrations with unclear updates, poor filtering options, and missed delivery deadlines. These insights guided us in refining the experience, improving navigation, and adding features that directly addressed their needs.</p>
+          <div class="cs-rs-diagram">
+            <img
+              src="kikku-project/research summary.png"
+              alt="Research summary diagrams: 45% experienced confusion from wrong pickup details, 58% struggled with product discovery, 83% felt frustrated with delivery tracking"
+              class="cs-rs-diagram__img"
+              loading="lazy"
+            >
+          </div>
+        </section>
 
-          <div class="cs-stats__row">
-            <img src="kikku-project/Impact 1.png" alt="45% of users struggled with product discovery" class="cs-stat__img" loading="lazy">
-            <img src="kikku-project/Impact 2.png" alt="58% abandoned checkout due to complexity" class="cs-stat__img" loading="lazy">
-            <img src="kikku-project/Impact 3.png" alt="83% wanted real-time delivery tracking" class="cs-stat__img" loading="lazy">
+        <!-- ======================================================
+             SECTION 8 — KEY FEATURES  |  Star: blue
+             ====================================================== -->
+        <section id="key-features" class="cs-section">
+          <div class="cs-section__header">
+            <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Key Features</h2>
           </div>
 
-          <div class="cs-summary__image-wrap">
-            <img src="kikku-project/research summary.png" alt="Research summary overview" class="cs-summary__img" loading="lazy">
+          <!-- BLOCK 1: Search & Categories — composed image (UI frame + tilted phone) + text -->
+          <div class="kf-block">
+            <div class="kf-block__top">
+              <img
+                src="kikku-project/key features one.png"
+                alt="Composed image: search and categories UI frame top-right, tilted phone showing kikku home screen with search bar, categories and Gadget Rush Sales banner bottom-left"
+                class="kf-frame-img"
+                style="border-radius: 0; box-shadow: none;"
+                loading="lazy"
+              >
+              <div class="kf-block__text">
+                <p class="kf-para">We designed a cleaner home screen with the search bar for better accessibility. Categories were simplified into a horizontal scroll with consistent icons and clear labels.</p>
+                <p class="kf-para">We also introduced a modern promotional banner and clear call-to-action to highlight ongoing deals without overwhelming users.</p>
+              </div>
+            </div>
           </div>
+
+          <!-- BLOCK 2: Product Section — UI frame + text → arrow → phone mockup -->
+          <div class="kf-block">
+            <div class="kf-block__top">
+              <img
+                src="kikku-project/Product Section 2.png"
+                alt="Flat UI showing Recommended For You horizontal product cards with prices and star ratings"
+                class="kf-frame-img"
+                style="border-radius: 0; box-shadow: none;"
+                loading="lazy"
+              >
+              <div class="kf-block__text">
+                <p class="kf-para">In the new design, we adopted a horizontal card layout that gives each product more breathing space and visual hierarchy. Product images are now larger and clearer, with well-defined typography for names, prices and ratings.</p>
+                <p class="kf-para">Discounted prices are emphasised with strikethrough and ratings are represented with visual icons to enhance quick decision-making.</p>
+              </div>
+            </div>
+            <div class="kf-block__mockup" style="width: calc(100% - 260px); max-width: 900px; margin-left: 40px; overflow: visible;">
+              <img
+                src="kikku-project/kikku order screen.png"
+                alt="Hand holding phone showing the order tracking screen"
+                class="kf-mockup-img"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <!-- BLOCK 3: Order Tracking — UI frame + text → arrow → phone mockup -->
+          <div class="kf-block">
+            <div class="kf-block__top">
+              <img
+                src="kikku-project/Delivery timeline.png"
+                alt="Order timeline card: placed 19 Dec, In Progress 20 Dec, Shipped 21 Dec, Delivered 23 Dec"
+                class="kf-frame-img"
+                loading="lazy"
+              >
+              <div class="kf-block__text">
+                <p class="kf-para">We redesigned the order tracking timeline to provide clear, accessible status updates directly within the user's workflow.</p>
+                <p class="kf-para">The new design features a vertical timeline with distinct status indicators accompanied by precise timestamps that give users confidence about their delivery progress.</p>
+              </div>
+            </div>
+            <div class="kf-block__mockup">
+              <img
+                src="kikku-project/kikku mockup order details.png"
+                alt="Tilted phone mockup showing live map tracking screen with delivery route across Abuja"
+                class="kf-mockup-img"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <!-- BLOCK 4: Live Map Tracking — UI frame + text → arrow → phone mockup -->
+          <div class="kf-block">
+            <div class="kf-block__top">
+              <img
+                src="kikku-project/Live Map.png"
+                alt="Live delivery route map showing orange dashed route across Abuja with 80 minute ETA"
+                class="kf-frame-img"
+                loading="lazy"
+              >
+              <div class="kf-block__text">
+                <p class="kf-para">Beyond static status updates, we integrated real-time location tracking that gives users complete visibility into their delivery journey. The live map displays the delivery person's current location with a profile indicator and the customer's destination marked with a secure lock icon.</p>
+                <p class="kf-para">The timeline and live map work together as a comprehensive tracking system. The timeline shows what stage the order is in while the map shows where it is in real-time.</p>
+              </div>
+            </div>
+            <div class="kf-block__mockup">
+              <img
+                src="kikku-project/kikku mockup order details.png"
+                alt="Tilted phone mockup showing live map tracking with delivery route across Abuja"
+                class="kf-mockup-img"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ======================================================
+             SECTION 9 — VISUAL DESIGNS  |  Star: purple
+             ====================================================== -->
+        <section id="visual-designs" class="cs-section">
+          <div class="cs-section__header">
+            <img src="about-assets/purple star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Visual Designs</h2>
+          </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 10 — REFLECTIONS  |  Star: purple
+             ====================================================== -->
+        <section id="reflections" class="cs-section">
+          <div class="cs-section__header">
+            <img src="about-assets/purple star.png" alt="" class="cs-star-img" aria-hidden="true">
+            <h2 class="cs-section__title">Reflections</h2>
+          </div>
+          <img
+            src="kikku-project/Design overview.png"
+            alt="Reflections: design outcomes and impact on the Kikku platform"
+            class="cs-full-image"
+            loading="lazy"
+          >
         </section>
 
       </div>
-      <!-- END .cs-content -->
+      <!-- END .cs-main-content -->
+
+
+      <!-- ── RIGHT: STICKY SIDEBAR ─────────────────────────────── -->
+      <aside class="sidebar" aria-label="Case study table of contents">
+        <p class="sidebar__label">Contents</p>
+        <nav class="sidebar__nav">
+          <a href="#overview"          class="sidebar__link">Overview</a>
+          <a href="#highlights"        class="sidebar__link">Highlights</a>
+          <a href="#challenges"        class="sidebar__link">Challenges</a>
+          <a href="#solutions"         class="sidebar__link">Solutions</a>
+          <a href="#user-personas"     class="sidebar__link">User Personas</a>
+          <a href="#design-process"    class="sidebar__link">Design Process</a>
+          <a href="#research-summary"  class="sidebar__link">Research Summary</a>
+          <a href="#key-features"      class="sidebar__link">Key Features</a>
+          <a href="#reflections"       class="sidebar__link">Reflections</a>
+          <a href="#" class="sidebar__link" id="back-to-top-link">Back to Top</a>
+        </nav>
+      </aside>
 
     </div>
-    <!-- END .cs-layout -->
+    <!-- END .case-study-layout -->
 
   </main>
 
-  <!-- FOOTER — exact copy from about.html -->
+
+  <!-- FOOTER — exact copy from index.html -->
   <footer class="footer" aria-label="Site footer">
 
     <div class="footer__top">
@@ -398,7 +477,7 @@
         <nav class="footer__nav" aria-label="Footer navigation">
           <a href="index.html">Works</a>
           <a href="about.html">About</a>
-          <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="#">Resume</a>
         </nav>
         <div class="footer__socials">
           <a href="mailto:omotoyosi2sure@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send email to Toyo (opens in new tab)">
