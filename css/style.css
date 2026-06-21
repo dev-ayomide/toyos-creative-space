@@ -1337,9 +1337,9 @@
 }
 
 .cs-next-project__title {
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semibold);
-  font-size: 30px;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: 32px;
   line-height: 120%;
   color: var(--color-text-primary);
 }
