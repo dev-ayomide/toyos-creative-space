@@ -641,18 +641,28 @@
 }
 
 .footer-band__clock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-family-primary);
   font-size: 16px;
   font-weight: var(--font-weight-semibold);
-  color: #FFFFFF;
+  color: #000000;
   margin: 0;
+}
+
+.footer-band__clock-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .footer-band__message {
   font-family: var(--font-family-primary);
   font-size: 20px;
   font-weight: var(--font-weight-regular);
-  color: #FFFFFF;
+  color: #000000;
   line-height: 1.6;
   margin: 0;
   max-width: 400px;
@@ -671,7 +681,7 @@
   font-family: var(--font-family-primary);
   font-size: 20px;
   font-weight: var(--font-weight-medium);
-  color: #FFFFFF !important;
+  color: #000000 !important;
   text-decoration: none !important;
 }
 
@@ -693,6 +703,9 @@
   height: 56px;
   border-radius: 50%;
   background: var(--color-white);
+  border-width: 0.5px 4px 4px 0.5px;
+  border-style: solid;
+  border-color: var(--color-border);
   text-decoration: none;
   flex-shrink: 0;
   transition: none;
@@ -1284,9 +1297,10 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 28px;
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semibold);
-  font-size: 22px;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
   color: var(--color-text-primary);
 }
 
@@ -1397,8 +1411,8 @@
 .cs-next-project__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: left center;
+  object-fit: contain;
+  object-position: center;
 }
 
 @media (max-width: 900px) {
