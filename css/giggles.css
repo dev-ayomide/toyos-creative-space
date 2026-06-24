@@ -42,7 +42,7 @@ body {
 .gg-challenges-row {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: start;
   gap: 24px;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .gg-challenges-photo {
-  width: 280px;
+  width: 400px;
   height: auto;
   display: block;
   flex-shrink: 0;
@@ -65,27 +65,22 @@ body {
 .gg-solution-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
 }
 
 .gg-solution-item {
   display: flex;
   align-items: baseline;
   gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.gg-solution-item:last-child {
-  border-bottom: none;
+  padding: 14px 0;
 }
 
 .gg-solution-item__num {
   flex-shrink: 0;
-  font-family: 'Fredoka One', cursive;
-  font-size: 40px;
+  font-family: 'Emilys Candy', cursive;
+  font-size: 44px;
   line-height: 1;
-  color: #C5B4E3;
+  color: #7D52F4;
   width: 36px;
   text-align: right;
 }
@@ -125,6 +120,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.gg-style-color-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gg-style-color-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #7EB380;
+  line-height: 1.3;
+  text-align: right;
+  margin: 0;
 }
 
 .gg-style-img {
