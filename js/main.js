@@ -74,10 +74,35 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    // Close when clicking outside the panel
+    document.addEventListener('click', function (e) {
+      if (
+        mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        closeMobileMenu();
+      }
+    });
+
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMobileMenu);
     });
+
+    // Copy email button
+    var copyBtn = mobileMenu.querySelector('.mobile-menu__copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var email = copyBtn.getAttribute('data-copy');
+        navigator.clipboard.writeText(email).then(function () {
+          var orig = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#7D52F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          setTimeout(function () { copyBtn.innerHTML = orig; }, 1500);
+        });
+      });
+    }
   }
 
   // Footer underwater animations
