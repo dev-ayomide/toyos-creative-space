@@ -3,14 +3,143 @@
    Page-specific additions on top of the shared case-study styles (kikku.css)
    ========================================================================== */
 
-.cs-problem-label--mt {
+/* --------------------------------------------------------------------------
+   SOLUTIONS — image LEFT (35%), text + numbered points RIGHT (65%). No card.
+   -------------------------------------------------------------------------- */
+.sol-columns {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 32px;
+  align-items: start;
+}
+
+.sol-columns__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.sol-columns__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sol-text p {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1C1C1C;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sol-num-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sol-num-list__item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.sol-num-list__num {
+  font-family: 'Emilys Candy', cursive;
+  font-weight: 700;
+  font-size: 45px;
+  color: #7D52F4;
+  flex-shrink: 0;
+}
+
+.sol-num-list__text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .sol-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sol-columns__image {
+    order: -1;
+  }
+}
+
+.cs-full-image--mt {
   margin-top: 32px;
 }
 
 /* --------------------------------------------------------------------------
-   NUMBERED LIST — "Spotlighting Issues" / Solutions outcomes
+   HIGHLIGHTS — two stacked frames
    -------------------------------------------------------------------------- */
-.cs-num-list {
+.cs-highlights__frame + .cs-highlights__frame {
+  margin-top: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   CHALLENGES — no card wrapper; text and image sit on the page background
+   -------------------------------------------------------------------------- */
+.ch-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #5C5C5C;
+  margin: 0 0 32px;
+}
+
+.ch-label--spotlight {
+  margin: 40px 0 16px;
+}
+
+.ch-columns {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 32px;
+  align-items: start;
+}
+
+.ch-columns__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.ch-columns__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ch-columns__text p {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1C1C1C;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ch-num-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -19,35 +148,183 @@
   list-style: none;
 }
 
-.cs-num-list--mt {
-  margin-top: 20px;
-}
-
-.cs-num-list__item {
+.ch-num-list__item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: baseline;
+  gap: 12px;
 }
 
-.cs-num-list__num {
+.ch-num-list__num {
   font-family: 'Emilys Candy', cursive;
-  font-size: 24px;
-  font-weight: 400;
-  color: var(--color-primary);
-  line-height: 1.3;
+  font-weight: 700;
+  font-size: 45px;
+  color: #7D52F4;
   flex-shrink: 0;
 }
 
-.cs-num-list__text {
+.ch-num-list__text {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ch-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ch-columns__image {
+    order: -1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   USER PERSONAS — dark meta/photo column + light summary/frustrations/needs cards
+   -------------------------------------------------------------------------- */
+.hp-personas-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hp-persona {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "meta summary summary"
+    "photo frustrations needs";
+  gap: 16px;
+  background: #1A1A1A;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.hp-persona--reversed {
+  grid-template-areas:
+    "summary summary meta"
+    "frustrations needs photo";
+}
+
+.hp-persona__meta {
+  grid-area: meta;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 4px;
+}
+
+.hp-persona__meet {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #C7C7C7;
+  margin: 0;
+}
+
+.hp-persona__name {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  margin: 0;
+}
+
+.hp-persona__detail {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #C7C7C7;
+  margin: 0;
+}
+
+.hp-persona__photo {
+  grid-area: photo;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  display: block;
+}
+
+.hp-persona__summary {
+  grid-area: summary;
+  background: #FAFAFA;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.hp-persona__summary p {
   font-family: 'Urbanist', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #1C1C1C;
-  line-height: 1.5;
+  color: #3C3C3C;
+  line-height: 1.6;
   margin: 0;
-  padding-top: 3px;
 }
 
-.cs-full-image--mt {
-  margin-top: 32px;
+.hp-persona__panel {
+  background: #FAFAFA;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.hp-persona__panel--frustrations {
+  grid-area: frustrations;
+}
+
+.hp-persona__panel--needs {
+  grid-area: needs;
+}
+
+.hp-persona__panel-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin: 0 0 12px;
+}
+
+.hp-persona__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.hp-persona__list li {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3C3C3C;
+  line-height: 1.5;
+}
+
+.hp-persona__list strong {
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+@media (max-width: 1024px) {
+  .hp-persona,
+  .hp-persona--reversed {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "meta"
+      "photo"
+      "summary"
+      "frustrations"
+      "needs";
+  }
+
+  .hp-persona__photo {
+    min-height: 280px;
+  }
 }

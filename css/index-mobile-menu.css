@@ -1,0 +1,211 @@
+/* ========================================
+   MOBILE HAMBURGER MENU — index.html only
+   Overrides the shared .nav__hamburger / .mobile-menu
+   rules from style.css for the homepage only.
+   ======================================== */
+
+.nav__hamburger {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1002;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  background: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  .nav__hamburger {
+    display: flex;
+  }
+}
+
+.nav__hamburger-icon,
+.nav__hamburger-close {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav__hamburger-close {
+  display: none;
+}
+
+.nav__hamburger.active .nav__hamburger-icon {
+  display: none;
+}
+
+.nav__hamburger.active .nav__hamburger-close {
+  display: block;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  padding: 96px 32px 48px;
+  border-radius: 0;
+  box-shadow: none;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(235, 235, 235, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 1001;
+
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 0;
+}
+
+.mobile-menu__link {
+  display: block;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-text-primary);
+}
+
+.mobile-menu__btn {
+  align-self: flex-start;
+  margin-top: 48px;
+  padding: 12px 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-width: 0.5px 4px 4px 0.5px;
+  border-style: solid;
+  border-color: var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-menu__btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.mobile-menu__illustration {
+  margin-top: 32px;
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-menu__illustration img {
+  width: 114px;
+  height: 117px;
+  border: none;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.mobile-menu__contact {
+  margin-top: 32px;
+  padding-top: 0;
+  border-top: none;
+  opacity: 1;
+}
+
+.mobile-menu__contact-label {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.mobile-menu__contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mobile-menu__contact-email {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.mobile-menu__globe {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.mobile-menu__globe-icon {
+  height: 14px;
+  width: auto;
+  display: block;
+  animation: mobile-menu-globe-spin 4s linear infinite;
+}
+
+@keyframes mobile-menu-globe-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
