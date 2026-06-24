@@ -12,10 +12,10 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   PAGE TITLE — override to Fredoka One for on-brand feel
+   PAGE TITLE — inherits Emilys Candy from kikku.css base
    -------------------------------------------------------------------------- */
 .cs-page-title {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Emilys Candy', cursive;
   color: #292929;
 }
 

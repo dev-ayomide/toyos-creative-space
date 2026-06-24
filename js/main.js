@@ -1,3 +1,53 @@
+// Dynamic sidebar — builds links from sections present on the page
+(function () {
+  var nav = document.querySelector('.sidebar__nav');
+  if (!nav) return;
+
+  var sections = document.querySelectorAll('section[id].cs-section');
+  sections.forEach(function (section) {
+    var titleEl = section.querySelector('.cs-section__title');
+    if (!titleEl) return;
+    var a = document.createElement('a');
+    a.href = '#' + section.id;
+    a.className = 'sidebar__link';
+    a.textContent = titleEl.textContent;
+    nav.appendChild(a);
+  });
+
+  var backToTop = document.createElement('a');
+  backToTop.href = '#';
+  backToTop.className = 'sidebar__link';
+  backToTop.id = 'back-to-top-link';
+  backToTop.textContent = 'Back to Top';
+  nav.appendChild(backToTop);
+
+  var sidebarLinks = nav.querySelectorAll('.sidebar__link');
+
+  function onScroll() {
+    var scrollY = window.scrollY;
+    sections.forEach(function (section) {
+      var top    = section.offsetTop - 130;
+      var bottom = top + section.offsetHeight;
+      if (scrollY >= top && scrollY < bottom) {
+        sidebarLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + section.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  backToTop.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
 // Lagos Live Clock
 function updateLagosTime() {
   const now = new Date();
