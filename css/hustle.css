@@ -364,3 +364,272 @@
     min-height: 280px;
   }
 }
+
+/* ==========================================================================
+   HUSTLE SECTION TWO — Design Deep Dive
+   Full-width annotated feature breakdown that sits below the sidebar layout.
+   ========================================================================== */
+
+.hs2-section {
+  padding: 100px 80px 140px;
+}
+
+/* Each numbered feature block */
+.hs2-block {
+  margin-bottom: 120px;
+}
+
+.hs2-block:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Optional "Job summary / Client Details" labels above phone pair ────── */
+.hs2-labels-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  margin-bottom: 16px;
+}
+
+.hs2-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #292929;
+  letter-spacing: 0.52px;
+}
+
+.hs2-label--right {
+  text-align: right;
+}
+
+/* ── Three-column phone / annotation grid ─────────────────────────────── */
+.hs2-phones {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hs2-phone__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Raw screenshot (no device frame baked in) – add soft frame + shadow */
+.hs2-phone__img--raw {
+  border-radius: 30px;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Annotation column (sits between the two phones) ─────────────────── */
+.hs2-annotations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: stretch;
+  padding: 48px 28px;
+  gap: 16px;
+}
+
+.hs2-annotation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Dashed connecting line from phone edge to label */
+.hs2-annotation__line {
+  width: 52px;
+  height: 0;
+  border-top: 1.5px dashed #292929;
+  flex-shrink: 0;
+}
+
+.hs2-annotation__label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  color: #292929;
+  letter-spacing: 0.42px;
+}
+
+/* ── Description card ─────────────────────────────────────────────────── */
+.hs2-desc {
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 28px 32px;
+  max-width: 680px;
+}
+
+.hs2-desc--right {
+  margin-left: auto;
+}
+
+/* Numbered section title uses Emily's Candy exactly like the Figma */
+.hs2-desc__title-list {
+  font-family: 'Emilys Candy', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.64px;
+  margin: 0 0 12px;
+  padding-left: 44px;
+}
+
+.hs2-desc__divider {
+  height: 1px;
+  background: #D0D0D0;
+  border: none;
+  margin: 0 0 20px;
+}
+
+.hs2-desc__text {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #292929;
+  line-height: 1.6;
+  letter-spacing: 0.44px;
+  margin: 0 0 12px;
+}
+
+.hs2-desc__text:last-child {
+  margin-bottom: 0;
+}
+
+.hs2-desc__list {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #292929;
+  line-height: 1.6;
+  letter-spacing: 0.44px;
+  margin: 0;
+  padding-left: 28px;
+}
+
+.hs2-desc__list li {
+  margin-bottom: 8px;
+}
+
+.hs2-desc__list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Full-width construction worker photo break ───────────────────────── */
+.hs2-photo-break {
+  margin-bottom: 120px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.hs2-photo-break__img {
+  display: block;
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .hs2-section {
+    padding: 80px 48px 100px;
+  }
+
+  .hs2-annotation__label {
+    font-size: 18px;
+  }
+
+  .hs2-label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hs2-section {
+    padding: 60px 32px 80px;
+  }
+
+  .hs2-phones {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 32px;
+  }
+
+  /* On medium screens, annotations span both columns and collapse to tags */
+  .hs2-annotations {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .hs2-annotation__line {
+    display: none;
+  }
+
+  .hs2-annotation__label {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .hs2-labels-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hs2-labels-row > :nth-child(2) {
+    display: none;
+  }
+
+  .hs2-desc,
+  .hs2-desc--right {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hs2-photo-break__img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hs2-section {
+    padding: 48px 20px 60px;
+  }
+
+  .hs2-phones {
+    grid-template-columns: 1fr;
+  }
+
+  .hs2-labels-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hs2-labels-row .hs2-label--right {
+    display: none;
+  }
+
+  .hs2-desc__title-list {
+    font-size: 26px;
+  }
+
+  .hs2-desc__text,
+  .hs2-desc__list {
+    font-size: 18px;
+  }
+
+  .hs2-photo-break__img {
+    height: 240px;
+  }
+
+  .hs2-block {
+    margin-bottom: 80px;
+  }
+}

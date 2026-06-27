@@ -394,6 +394,240 @@
     </div>
     <!-- END .case-study-layout -->
 
+    <!-- ============================================================
+         HUSTLE SECTION TWO — Design Deep Dive
+         Annotated feature breakdown: phone pairs + description cards
+         ============================================================ -->
+    <section class="hs2-section" aria-label="Hustle app design deep dive">
+
+      <!-- ── 1. Home Screen ─────────────────────────────────────── -->
+      <div class="hs2-block">
+
+        <div class="hs2-phones">
+          <!-- Left: raw home-screen screenshot -->
+          <div>
+            <img
+              src="hustle-project/home-screen-mockup.png"
+              alt="Hustle app home screen showing personalised greeting, weekly earnings card, gig category pills and a list of nearby job listings"
+              class="hs2-phone__img hs2-phone__img--raw"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Middle: annotation callouts pointing to the left phone -->
+          <div class="hs2-annotations">
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Personalized greetings</span>
+            </div>
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Categorization of Gigs</span>
+            </div>
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Well structured Gig Details</span>
+            </div>
+          </div>
+
+          <!-- Right: Events &amp; Entertainment category view (device-framed) -->
+          <div>
+            <img
+              src="hustle-project/events-category-screen.png"
+              alt="Hustle app home screen filtered to the Events and Entertainment category, showing available gig listings with pay, times and locations"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+        </div><!-- /.hs2-phones -->
+
+        <!-- Description card — left-aligned, below the phones -->
+        <div class="hs2-desc">
+          <ol class="hs2-desc__title-list" start="1">
+            <li>Home Screen</li>
+          </ol>
+          <hr class="hs2-desc__divider">
+          <p class="hs2-desc__text">I designed a simple Home screen for users to have easy access to without feeling overwhelmed by the interface. I took into consideration that many skilled workers like traders, electricians, hairstylists etc. who may not be tech savvy are new to a platform like this.</p>
+          <p class="hs2-desc__text">To ensure they have a great first time experience using the app, I decided to use a clear navigation bar, transparent earnings, Gig categorization and clear booking information making the interface simple and accessible to everyone. The &ldquo;For you&rdquo; tab also suggests jobs based on the skills of users.</p>
+        </div>
+
+      </div><!-- /.hs2-block -->
+
+
+      <!-- ── 2. Job Details of Unbooked Gigs ───────────────────── -->
+      <div class="hs2-block">
+
+        <!-- Column labels above the phone pair -->
+        <div class="hs2-labels-row">
+          <span class="hs2-label">Job summary</span>
+          <span></span>
+          <span class="hs2-label hs2-label--right">Client Details</span>
+        </div>
+
+        <div class="hs2-phones">
+          <!-- Left: Job Summary tab -->
+          <div>
+            <img
+              src="hustle-project/job-summary-screen.png"
+              alt="Hustle app Job Details page — Job Summary tab showing the gig description, requirements and safety tips for a painting job"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Middle: annotation callouts -->
+          <div class="hs2-annotations">
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Further details for clarity</span>
+            </div>
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Requirements for the job</span>
+            </div>
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Localised means of verification for clients</span>
+            </div>
+          </div>
+
+          <!-- Right: About Client tab showing client profile, reviews and verification -->
+          <div>
+            <img
+              src="hustle-project/client-details-screen.png"
+              alt="Hustle app Job Details page — About Client tab showing client profile, star ratings, review excerpts and identity verification badges"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+        </div><!-- /.hs2-phones -->
+
+        <!-- Description card — right-aligned, below the phones -->
+        <div class="hs2-desc hs2-desc--right">
+          <ol class="hs2-desc__title-list" start="2">
+            <li>Job Details of Unbooked Gigs</li>
+          </ol>
+          <hr class="hs2-desc__divider">
+          <p class="hs2-desc__text">To build trust, I ensured that Hustlers are well aware of the Client&rsquo;s identity when they are about to apply for Gigs. They are well informed of the Safety tips to take before and during the process of the job.</p>
+          <p class="hs2-desc__text">There is 100% transparency about the job &amp; client:</p>
+          <ul class="hs2-desc__list">
+            <li>Verified clients means they are real clients who are posting real gigs on the platform.</li>
+            <li>Verified payment method means they have made payments for the Gig and just need a suitable person that can deliver.</li>
+            <li>Reviews and Ratings help Hustlers to make a decision whether to work for the clients or not.</li>
+            <li>Job Activity shows the number of applicants and if someone has been hired for it.</li>
+          </ul>
+        </div>
+
+      </div><!-- /.hs2-block -->
+
+
+      <!-- ── Full-width photo break ─────────────────────────────── -->
+      <div class="hs2-photo-break">
+        <img
+          src="hustle-project/construction-worker-mockup.png"
+          alt="A construction worker in a hard hat holding a phone running the Hustle app while browsing available gig listings"
+          class="hs2-photo-break__img"
+          loading="lazy"
+        >
+      </div>
+
+
+      <!-- ── 3. Applying for Gigs ───────────────────────────────── -->
+      <div class="hs2-block">
+
+        <div class="hs2-phones">
+          <!-- Left: Client home screen (Top Hustlers, Quick Tasks) -->
+          <div>
+            <img
+              src="hustle-project/booked-job-screen.png"
+              alt="Hustle app client home screen showing a profile completion prompt, Quick Tasks shortcuts and a list of Top Hustlers nearby with their skills and distance"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Middle: annotation callouts -->
+          <div class="hs2-annotations">
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">New Offers for Hustlers</span>
+            </div>
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Top Hustlers near you</span>
+            </div>
+          </div>
+
+          <!-- Right: Applications — New Offers tab -->
+          <div>
+            <img
+              src="hustle-project/application-pending-screen.png"
+              alt="Hustle app Applications screen showing the New Offers tab with active gig opportunities, offer counts and applicant message previews"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+        </div><!-- /.hs2-phones -->
+
+        <!-- Description card — left-aligned -->
+        <div class="hs2-desc">
+          <ol class="hs2-desc__title-list" start="3">
+            <li>Applying for Gigs</li>
+          </ol>
+          <hr class="hs2-desc__divider">
+          <p class="hs2-desc__text">The application flow is designed to be fast and transparent. Hustlers can see how many people have applied and read offer messages, while Clients can browse all applicants and select the best fit for their gig — keeping the process fair and visible for everyone involved.</p>
+        </div>
+
+      </div><!-- /.hs2-block -->
+
+
+      <!-- ── 4. Application Status &amp; Payments ──────────────── -->
+      <div class="hs2-block">
+
+        <div class="hs2-phones">
+          <!-- Left: Release gig modal (disabled 48-hour button) -->
+          <div>
+            <img
+              src="hustle-project/apply-offer-screen.png"
+              alt="Hustle app release gig modal — the Submit Request button is greyed out within the 48 hour protection window after a gig is accepted"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Middle: annotation callout -->
+          <div class="hs2-annotations">
+            <div class="hs2-annotation">
+              <span class="hs2-annotation__line"></span>
+              <span class="hs2-annotation__label">Disabled button due to the 48 hours timeline</span>
+            </div>
+          </div>
+
+          <!-- Right: Payments screen (wallet + history) -->
+          <div>
+            <img
+              src="hustle-project/offer-accepted-screen.png"
+              alt="Hustle app Payments screen showing wallet balance, saved Hustle Wallet bank account details and a full payment history with past gig earnings"
+              class="hs2-phone__img"
+              loading="lazy"
+            >
+          </div>
+        </div><!-- /.hs2-phones -->
+
+        <!-- Description card — right-aligned -->
+        <div class="hs2-desc hs2-desc--right">
+          <ol class="hs2-desc__title-list" start="4">
+            <li>Application &amp; Payments</li>
+          </ol>
+          <hr class="hs2-desc__divider">
+          <p class="hs2-desc__text">To protect both parties, Hustlers cannot release a booked Gig within 48 hours of accepting it — the Release button is intentionally disabled during this window to prevent last-minute cancellations. The Payments screen gives full visibility into wallet balance, saved payment method and a complete transaction history.</p>
+        </div>
+
+      </div><!-- /.hs2-block -->
+
+    </section>
+    <!-- END .hs2-section -->
+
   </main>
 
   <!-- NEXT PROJECT -->
