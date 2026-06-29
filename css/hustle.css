@@ -735,3 +735,255 @@
     margin-bottom: 56px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE — Mobile (≤ 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* ── Page title & subtitle ── */
+  .cs-page-title {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+
+  .cs-page-subtitle {
+    font-size: 12px;
+  }
+
+  /* ── Section spacing: 24px between all sections ── */
+  .cs-section {
+    padding: 24px 0 0;
+  }
+
+  /* ── Section heading → first content gap ── */
+  .cs-section__header {
+    margin-bottom: 16px;
+  }
+
+  .cs-section__title {
+    font-size: 16px;
+  }
+
+  /* ── Hero image bottom gap ── */
+  .cs-hero-image-wrap {
+    margin-bottom: 24px;
+  }
+
+  /* ── Overview ── */
+  .cs-overview {
+    gap: 12px;
+  }
+
+  .cs-overview__item {
+    gap: 4px;
+  }
+
+  .cs-overview__label,
+  .cs-overview__value {
+    font-size: 16px;
+  }
+
+  /* ── Research intro text ── */
+  .cs-intro-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* ── Challenges ── */
+  .ch-label {
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+
+  .ch-columns__image {
+    order: -1;
+  }
+
+  .ch-columns__text p {
+    font-size: 16px;
+  }
+
+  .ch-num-list__text {
+    font-size: 16px;
+  }
+
+  /* ── Solutions ── */
+  .sol-columns__image {
+    order: -1;
+  }
+
+  .sol-text p {
+    font-size: 16px;
+  }
+
+  .sol-num-list {
+    margin: 24px 0 0;
+  }
+
+  .sol-num-list__text {
+    font-size: 16px;
+  }
+
+  /* ── User Personas — text sizes ── */
+  .hp-persona__meet {
+    font-size: 16px;
+  }
+
+  .hp-persona__name {
+    font-size: 16px;
+  }
+
+  .hp-persona__detail:nth-of-type(2),
+  .hp-persona__detail:nth-of-type(3) {
+    font-size: 16px;
+  }
+
+  .hp-persona__panel-title {
+    font-size: 16px;
+  }
+
+  .hp-persona__summary p {
+    font-size: 16px;
+  }
+
+  .hp-persona__list li {
+    font-size: 16px;
+  }
+
+  /* Image on top for reversed persona ── */
+  .hp-persona--reversed .hp-persona__left {
+    order: -1;
+  }
+
+  /* ── Design Deep Dive (Section 2) ── */
+  .hs2-section {
+    padding: 24px 0 40px;
+  }
+
+  .hs2-block {
+    margin-bottom: 48px;
+  }
+
+  .hs2-phones {
+    grid-template-columns: 1fr;
+  }
+
+  .hs2-labels-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hs2-labels-row .hs2-label--right {
+    display: none;
+  }
+
+  .hs2-label {
+    font-size: 16px;
+  }
+
+  .hs2-desc__title-list {
+    font-size: 16px;
+  }
+
+  .hs2-desc__text,
+  .hs2-desc__list {
+    font-size: 16px;
+  }
+
+  .hs2-photo-break__img {
+    height: 200px;
+  }
+
+  /* ── Section 3 block spacing ── */
+  .hs3-block {
+    margin-bottom: 24px;
+  }
+
+  /* ── Next Project section — mirrors Sparkles mobile ── */
+  .cs-next-project {
+    padding: 24px 16px 40px;
+  }
+
+  .cs-next-project__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cs-next-project__star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cs-next-project__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    gap: 10.81px;
+    width: 100%;
+    max-width: 355px;
+    height: 567.53px;
+    border-radius: 17.2986px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cs-next-project__image {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .cs-next-project__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .cs-next-project__text {
+    flex: none;
+    padding: 0 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cs-next-project__title-row {
+    gap: 8px;
+  }
+
+  .cs-next-project__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cs-next-project__title {
+    font-size: 16px;
+  }
+
+  .cs-next-project__category {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .cs-next-project__description {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .cs-next-project__btn {
+    margin-top: 10.81px;
+    align-self: stretch;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    width: 100%;
+  }
+}

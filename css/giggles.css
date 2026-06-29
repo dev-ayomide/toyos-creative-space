@@ -40,10 +40,18 @@ body {
   object-fit: contain;
 }
 
+.cs-next-project__card .project-card__description {
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .cs-next-project__card {
     padding: 16px;
     gap: 16px;
+  }
+
+  .cs-next-project__image {
+    order: -1;
   }
 }
 
@@ -211,11 +219,63 @@ body {
    RESPONSIVE — Mobile (≤ 768px)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+
+  /* ── Page title & subtitle ── */
+  .cs-page-title {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+
+  .cs-page-subtitle {
+    font-size: 12px;
+  }
+
+  /* ── Section spacing: 24px between all sections ── */
+  .cs-section {
+    padding: 24px 0 0;
+  }
+
+  /* ── Section heading → first content gap ── */
+  .cs-section__header {
+    margin-bottom: 16px;
+  }
+
+  .cs-section__title {
+    font-size: 16px;
+  }
+
+  /* ── Hero image bottom gap ── */
+  .cs-hero-image-wrap {
+    margin-bottom: 24px;
+  }
+
+  /* ── Overview ── */
+  .cs-overview {
+    gap: 12px;
+  }
+
+  .cs-overview__item {
+    gap: 4px;
+  }
+
+  .cs-overview__label,
+  .cs-overview__value {
+    font-size: 16px;
+  }
+
+  /* ── Problem label ── */
+  .cs-problem-label {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* ── Highlights ── */
   .gg-highlights-wrap {
     padding: 28px 20px;
     border-radius: 20px;
   }
 
+  /* ── Challenges ── */
   .gg-challenges-row {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -227,6 +287,7 @@ body {
     margin: 0 auto;
   }
 
+  /* ── Solutions ── */
   .gg-solution-item {
     padding: 14px 0;
     gap: 16px;
@@ -239,5 +300,135 @@ body {
 
   .gg-solution-item__text {
     font-size: 16px;
+  }
+
+  /* ── Style guide label ── */
+  .gg-style-color-label {
+    font-size: 16px;
+  }
+
+  /* ── Next Project section — mirrors Sparkles mobile ── */
+  .cs-next-project {
+    padding: 24px 16px 40px;
+  }
+
+  .cs-next-project__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cs-next-project__star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cs-next-project__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    gap: 10.81px;
+    width: 100%;
+    max-width: 355px;
+    height: 567.53px;
+    border-radius: 17.2986px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cs-next-project__image {
+    order: -1;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .cs-next-project__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .cs-next-project__text {
+    flex: none;
+    padding: 0 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cs-next-project__title-row {
+    gap: 8px;
+  }
+
+  .cs-next-project__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cs-next-project__title {
+    font-size: 16px;
+  }
+
+  .cs-next-project__category {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .cs-next-project__description {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .cs-next-project__btn {
+    margin-top: 10.81px;
+    align-self: stretch;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .cs-next-project__card .project-card__category {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .cs-next-project__card .project-card__description {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .cs-next-project__card .project-card__metrics {
+    margin-top: 8px;
+    gap: 4px;
+  }
+
+  .cs-next-project__card .project-card__metric {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .cs-next-project__card .project-card__check-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cs-next-project__card .project-card__btn {
+    margin-top: 10.81px;
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-align: center;
   }
 }

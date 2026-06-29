@@ -43,23 +43,47 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   CHARACTERS — image with name labels below
+   CHARACTERS — desktop uses Characters.png; mobile uses individual cards
    -------------------------------------------------------------------------- */
-.kd-char-img {
-  margin-bottom: 0;
+.kd-char-desktop {
+  display: block;
 }
 
-.kd-char-names {
+.kd-char-mobile {
+  display: none;
+}
+
+.kd-char-list {
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.kd-char-item {
   display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.kd-char-names span {
-  font-family: 'Urbanist', sans-serif;
+.kd-char-solo-img {
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+.kd-char-solo-img--cat {
+  max-width: 200px;
+}
+
+.kd-char-name {
+  font-family: 'Emilys Candy', cursive;
   font-size: 24px;
-  font-weight: 500;
-  color: #5C5C5C;
+  font-weight: 400;
+  color: #5B45C5;
+  text-align: center;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -196,6 +220,47 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   NEXT PROJECT — Selected Illustration Works card (desktop)
+   -------------------------------------------------------------------------- */
+.cs-next-project__card {
+  align-items: center;
+  padding: 16px 32px;
+  gap: 20px;
+}
+
+.cs-next-project__image {
+  background: transparent;
+  align-self: stretch;
+  border-radius: var(--radius-xl);
+}
+
+.cs-next-project__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.cs-next-project__icon-img {
+  object-fit: contain;
+}
+
+.cs-next-project__card .project-card__description {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .cs-next-project__card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .cs-next-project__image {
+    order: -1;
+  }
+}
+
+/* --------------------------------------------------------------------------
    RESPONSIVE — Tablet (≤ 1024px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
@@ -225,11 +290,141 @@ body {
     width: 90%;
   }
 
+  .kd-char-desktop {
+    display: none;
+  }
+
+  .kd-char-mobile {
+    display: flex;
+    gap: 40px;
+  }
+
+  .kd-char-item {
+    gap: 14px;
+  }
+
+  .kd-char-solo-img {
+    max-width: 200px;
+  }
+
+  .kd-char-solo-img--cat {
+    max-width: 140px;
+  }
+
+  .kd-char-name {
+    font-size: 18px;
+  }
+
   .kd-reflections {
     gap: 20px;
   }
 
   .kd-reflections p {
     font-size: 16px;
+  }
+
+  /* ── Next Project section — mirrors Sparkles mobile ── */
+  .cs-next-project {
+    padding: 24px 16px 40px;
+  }
+
+  .cs-next-project__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cs-next-project__star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cs-next-project__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    gap: 10.81px;
+    width: 100%;
+    max-width: 355px;
+    height: 567.53px;
+    border-radius: 17.2986px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cs-next-project__image {
+    order: -1;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .cs-next-project__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .cs-next-project__text {
+    flex: none;
+    padding: 0 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cs-next-project__title-row {
+    gap: 8px;
+  }
+
+  .cs-next-project__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cs-next-project__title {
+    font-size: 16px;
+  }
+
+  .cs-next-project__card .project-card__category {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .cs-next-project__card .project-card__description {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .cs-next-project__card .project-card__metrics {
+    margin-top: 8px;
+    gap: 4px;
+  }
+
+  .cs-next-project__card .project-card__metric {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .cs-next-project__card .project-card__check-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cs-next-project__card .project-card__btn {
+    margin-top: 10.81px;
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-align: center;
   }
 }

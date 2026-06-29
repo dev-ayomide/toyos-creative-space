@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/kikku.css">
   <link rel="stylesheet" href="css/kudos.css">
+  <link rel="stylesheet" href="css/index-mobile-menu.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -21,22 +22,13 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div class="mobile-menu__header">
-      <a href="index.html" class="mobile-menu__logo"><img src="portfolio-design-images/tcs-logo.png" alt="Toyo's Creative Space"></a>
-      <button class="mobile-menu__close" aria-label="Close navigation menu">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16 2L2 16M2 2L16 16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </div>
     <nav class="mobile-menu__nav">
       <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
       <a href="index.html#projects" class="mobile-menu__link">Work</a>
       <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="mobile-menu__link" target="_blank" rel="noopener noreferrer">Resume</a>
     </nav>
-    <div class="mobile-menu__actions">
-      <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">&#128197; Book a Call &rarr;</a>
-    </div>
+    <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="mobile-menu__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
     <div class="mobile-menu__illustration" aria-hidden="true">
       <img src="about-assets/teeny at work.png" alt="">
     </div>
@@ -51,9 +43,15 @@
           </svg>
         </button>
       </div>
-      <p class="mobile-menu__globe">🌐 Works round the Globe</p>
+      <p class="mobile-menu__globe"><img src="mobile menu/globe.svg" alt="" class="mobile-menu__globe-icon">Works round the Globe</p>
     </div>
   </div>
+
+  <!-- Mobile Menu Toggle (mobile only) -->
+  <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+    <img src="mobile menu/menu.svg" alt="" class="nav__hamburger-icon">
+    <img src="mobile menu/cancel menu.png" alt="" class="nav__hamburger-close">
+  </button>
 
   <!-- Navigation -->
   <header>
@@ -68,11 +66,6 @@
       </div>
       <div class="nav__actions">
         <a href="https://cal.com/toyoscreativespace/project-discovery-call" class="nav__btn" target="_blank" rel="noopener noreferrer" aria-label="Book a call (opens in new tab)">Book a Call</a>
-        <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-          <span class="nav__hamburger-line"></span>
-        </button>
       </div>
     </nav>
   </header>
@@ -120,21 +113,17 @@
               <p class="cs-overview__value">Illustration Designer</p>
             </div>
             <div class="cs-overview__item">
-              <p class="cs-overview__label">Tools</p>
-              <p class="cs-overview__value">Figma</p>
-            </div>
-            <div class="cs-overview__item">
-              <p class="cs-overview__label">Status</p>
-              <p class="cs-overview__value">Concept, Illustration System</p>
+              <p class="cs-overview__label">Timeline</p>
+              <p class="cs-overview__value">Mar 2026</p>
             </div>
             <div class="cs-overview__item">
               <p class="cs-overview__label">Deliverables</p>
-              <p class="cs-overview__value">Illustration Design, Storyboarding, Brand Direction</p>
+              <p class="cs-overview__value">Illustration Design, Visual Design</p>
             </div>
             <div class="cs-overview__item">
               <p class="cs-overview__label">Summary</p>
-              <p class="cs-overview__value">KUDOS is a smart budgeting app built specifically for freelancers and gig workers. Unlike traditional budgeting apps that were designed for people with steady monthly salaries, KUDOS was built for freelancers with unsteady incomes and gig mobile income earners who face decentralized access to financial resources.</p>
-              <p class="cs-overview__value">KUDOS is the Home of Finance. It's an emotional experience that deals with decentralized access to financial resources, breaking down barriers and giving mobile economies a digital footprint.</p>
+              <p class="cs-overview__value">KUDOS is a smart budgeting app built specifically for freelancers and gig workers. Unlike traditional banking apps that were designed for people with steady monthly salaries. Kudos was built for people whose income comes in unpredictably (sometimes a lot, sometimes very little).</p>
+              <p class="cs-overview__value">Kudos is the future of finance, it is an emotional experience that deals with decentralized access,breaking barriers and giving invisible economies a digital footprint.</p>
             </div>
           </div>
         </section>
@@ -175,12 +164,29 @@
             <h2 class="cs-section__title">Characters</h2>
           </div>
 
+          <!-- Desktop: all three characters together -->
           <img
             src="kudos-project/Characters.png"
-            alt="KUDOS characters — Meet Jamal (Black man in green hoodie), And Jero the cat (orange tabby), Meet Jamila (woman with red hair in yellow top and purple pants)"
-            class="cs-full-image kd-char-img"
+            alt="KUDOS characters — Meet Jamal (Black man in green hoodie), Meet Jamila (woman with red hair in yellow top and purple pants), And Jero the cat (orange tabby)"
+            class="cs-full-image kd-char-img kd-char-desktop"
             loading="lazy"
           >
+
+          <!-- Mobile: each character individually -->
+          <div class="kd-char-list kd-char-mobile">
+            <div class="kd-char-item">
+              <img src="Jamal%20(2).png" alt="Meet Jamal — Black man in green hoodie with arms crossed" class="kd-char-solo-img" loading="lazy">
+              <p class="kd-char-name">Meet Jamal</p>
+            </div>
+            <div class="kd-char-item">
+              <img src="Jamila%20(1).png" alt="Meet Jamila — woman with red hair in yellow top and purple pants" class="kd-char-solo-img" loading="lazy">
+              <p class="kd-char-name">Meet Jamila</p>
+            </div>
+            <div class="kd-char-item">
+              <img src="cat.png" alt="Jero the cat — orange tabby cat sitting" class="kd-char-solo-img kd-char-solo-img--cat" loading="lazy">
+              <p class="kd-char-name">And Jero the cat</p>
+            </div>
+          </div>
         </section>
 
         <!-- ======================================================
@@ -377,16 +383,20 @@
       <div class="cs-next-project__text">
         <div class="cs-next-project__title-row">
           <div class="cs-next-project__icon">
-            <img src="icons/sparkles logo.png" alt="" class="cs-next-project__icon-img">
+            <img src="icons/selected illustration logo.png" alt="" class="cs-next-project__icon-img">
           </div>
-          <h2 class="cs-next-project__title">Sparkles Gamified Chores Platform</h2>
+          <h2 class="cs-next-project__title">Selected Illustration Works</h2>
         </div>
-        <p class="cs-next-project__category">Product Design, UX Research</p>
-        <p class="cs-next-project__description">Transforming household responsibilities into exciting adventures that kids love to complete. A gamified chore management app bridging parent supervision and children's natural desire for achievement.</p>
-        <a href="sparkles.html" class="cs-next-project__btn">View Case Study</a>
+        <p class="project-card__category">Illustration Designs</p>
+        <p class="project-card__description">Illustration Design for Kudos smart budgeting app for freelancers. It includes Character Designs and Illustration Systems. This also includes a selection of my sketches and vector Illustrations of Characters, Product etc.</p>
+        <div class="project-card__metrics">
+          <span class="project-card__metric"><img src="icons/check-circle.png" alt="" class="project-card__check-icon"> Kudos Micro-wealth &amp; Budgeting System</span>
+          <span class="project-card__metric"><img src="icons/check-circle.png" alt="" class="project-card__check-icon"> Avatar Illustrations</span>
+        </div>
+        <a href="kudos.html" class="project-card__btn">View Case Study</a>
       </div>
       <div class="cs-next-project__image">
-        <img src="sparkles-project/assets/hero-overview.svg" alt="Sparkles gamified chores platform mockup" loading="lazy">
+        <img src="portfolio-design-images/illustration work mockup.png" alt="Selected Illustration Works mockup" loading="lazy">
       </div>
     </div>
   </section>
