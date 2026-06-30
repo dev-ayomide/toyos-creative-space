@@ -910,6 +910,11 @@
   z-index: 1;
 }
 
+/* Right seaweed sits behind the purple mushroom cluster */
+.footer-sea__dgs-r {
+  z-index: 1;
+}
+
 /* Yellow/orange coral sit behind the sand so their roots are hidden and only the
    branches (which rise above the sand's wavy top edge) show */
 .footer-sea__ycoral,
@@ -992,8 +997,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 133px;
-  height: 78px;
+  width: 115px;
+  height: 67px;
   background-color: transparent;
   background-image: url('../portfolio-design-images/footer illustrations/rocks.png');
   background-size: 100% 100%;
@@ -1765,6 +1770,7 @@
     top: 462px !important;
     bottom: auto !important;
     height: 155px !important;
+    z-index: 2 !important;
   }
 
   .footer-sea__fw-green {
