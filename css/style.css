@@ -742,7 +742,7 @@
   min-height: 700px;
   background-image: url('../portfolio-design-images/footer illustrations/blue sea water.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   overflow: visible;
   padding-top: 130px;
@@ -755,7 +755,7 @@
   left: 0;
   width: 100%;
   height: auto;
-  display: block;
+  display: none;
   z-index: 4;
   pointer-events: none;
 }
@@ -786,7 +786,7 @@
   font-family: var(--font-family-primary);
   font-size: 16px;
   font-weight: var(--font-weight-semibold);
-  color: #000000;
+  color: #333333;
   margin: 0;
 }
 
@@ -800,7 +800,7 @@
 .footer-band__message {
   font-family: var(--font-family-primary);
   font-size: 20px;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   color: #000000;
   line-height: 1.6;
   margin: 0;
@@ -838,16 +838,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-white);
-  border-width: 0.5px 4px 4px 0.5px;
+  padding: 10px;
+  gap: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  background: var(--color-footer-bg);
+  border-width: 0.5px 0.5px 4px 0.5px;
   border-style: solid;
   border-color: var(--color-border);
   text-decoration: none;
   flex-shrink: 0;
   transition: none;
+  box-sizing: border-box;
 }
 
 .footer-band__social-btn img {
@@ -869,7 +872,7 @@
   overflow: visible;
 }
 
-/* Sand floor */
+/* Sand floor — flat color fill behind the illustrated sand edge */
 .footer-sea__sand {
   position: absolute;
   bottom: 0;
@@ -881,12 +884,37 @@
   z-index: 1;
 }
 
+/* Sand floor illustration — full width, natural aspect ratio so the wavy
+   top edge is never stretched/straightened */
+.footer-sea__sand-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* All illustrated elements share this base */
 .footer-sea__el {
   position: absolute;
   width: auto;
   object-fit: contain;
   z-index: 2;
+}
+
+/* Green coral sits behind the back-to-land rock so the rock hides its exposed stem */
+.footer-sea__gc {
+  z-index: 1;
+}
+
+/* Yellow/orange coral sit behind the sand so their roots are hidden and only the
+   branches (which rise above the sand's wavy top edge) show */
+.footer-sea__ycoral,
+.footer-sea__ocoral {
+  z-index: 0;
 }
 
 /* Fish wrappers — position set via inline style on each */
@@ -922,7 +950,7 @@
 .footer-sea__teeny {
   position: absolute;
   right: 80px;
-  top: 0;
+  top: -30px;
   height: 200px;
   width: auto;
   object-fit: contain;
@@ -959,12 +987,21 @@
   z-index: 5;
 }
 
+/* Back to land — uses the actual rocks.png illustration as its shape, undistorted */
 .footer-sea__back-btn {
-  background: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 133px;
+  height: 78px;
+  background-color: transparent;
+  background-image: url('../portfolio-design-images/footer illustrations/rocks.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: var(--color-white);
   border: none;
-  border-radius: var(--radius-full);
-  padding: 10px 24px;
+  border-radius: 0;
+  padding: 0;
   font-family: var(--font-family-primary);
   font-size: 14px;
   font-weight: var(--font-weight-medium);
@@ -974,7 +1011,6 @@
 
 .footer-sea__back-btn:hover,
 .footer-sea__back-btn:focus {
-  background: #333333;
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
 }
@@ -988,9 +1024,8 @@
 }
 
 /* Mobile-only footer elements — hidden on desktop/tablet */
-.footer-sea__sand-img,
-.footer-sea__oshells,
 .footer-sea__rock-btn,
+.footer-sea__rock-2,
 .footer-sea__bubble-img {
   display: none;
 }
@@ -1232,7 +1267,8 @@
   }
 
   .footer-sea__back-btn {
-    padding: 6px 18px;
+    width: 101px;
+    height: 59px;
     font-size: 12px;
   }
 
@@ -1641,6 +1677,7 @@
     top: 458px !important;
     bottom: auto !important;
     height: 165px !important;
+    z-index: 2 !important;
   }
 
   .footer-sea__dgs-l {
@@ -1697,6 +1734,7 @@
   }
 
   .footer-sea__rock-2 {
+    display: block !important;
     left: 175px !important;
     right: auto !important;
     top: 619px !important;
@@ -1718,6 +1756,7 @@
     top: 470px !important;
     bottom: auto !important;
     height: 155px !important;
+    z-index: 2 !important;
   }
 
   .footer-sea__dgs-r {
@@ -1772,7 +1811,8 @@
   }
 
   .footer-sea__fw-green .footer-sea__fish-img {
-    transform: none !important;
+    transform: scaleX(-1);
+    animation: mobile-flip-rl 18s linear infinite;
   }
 
   .footer-sea__fish-text {
@@ -1791,9 +1831,110 @@
     white-space: nowrap;
   }
 
+  /* ── Mobile Footer Animations ── */
+
+  @keyframes mobile-bubble-float {
+    0%   { transform: scale(0.65) translateY(0);      opacity: 0.7; }
+    70%  { opacity: 0.4; }
+    100% { transform: scale(0.65) translateY(-320px); opacity: 0; }
+  }
+
+  @keyframes mobile-seaweed-sway {
+    0%, 100% { transform: rotate(0deg); }
+    33%      { transform: rotate(3deg); }
+    66%      { transform: rotate(-3deg); }
+  }
+
+  @keyframes mobile-coral-sway {
+    0%, 100% { transform: rotate(0deg); }
+    33%      { transform: rotate(2deg); }
+    66%      { transform: rotate(-2deg); }
+  }
+
+  @keyframes mobile-fish-swim-r {
+    from { transform: translateX(0); }
+    to   { transform: translateX(365px); }
+  }
+
+  @keyframes mobile-fish-swim-l {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-295px); }
+  }
+
+  @keyframes mobile-flip-lr {
+    0%, 49.9%  { transform: scaleX(1); }
+    50%, 100%  { transform: scaleX(-1); }
+  }
+
+  @keyframes mobile-flip-rl {
+    0%, 49.9%  { transform: scaleX(-1); }
+    50%, 100%  { transform: scaleX(1); }
+  }
+
+  @keyframes mobile-wave-sway {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(-30px); }
+  }
+
+  /* Bubbles — float upward and fade */
   .footer-sea__bubble {
     transform: scale(0.65);
     transform-origin: center center;
+    animation: mobile-bubble-float 5s ease-in infinite;
+  }
+  .footer-sea__bubble:nth-child(odd) {
+    animation-duration: 6.5s;
+    animation-delay: -2.5s;
+  }
+  .footer-sea__bubble:nth-child(3n) {
+    animation-duration: 4s;
+    animation-delay: -1.2s;
+  }
+
+  /* PNG bubble images — float upward */
+  .footer-sea__bubble-img {
+    animation: mobile-bubble-float 6s ease-in infinite;
+  }
+  .footer-sea__bubble-img--a { animation-delay: -2s; }
+  .footer-sea__bubble-img--b { animation-delay: -4s; }
+
+  /* Seaweed — gentle sway from base */
+  .footer-sea__dgs-r {
+    transform-origin: bottom center;
+    animation: mobile-seaweed-sway 4s ease-in-out infinite;
+  }
+
+  /* Yellow fish — ping-pong left ↔ right, flip to face direction of travel */
+  .footer-sea__fish-wrap:not(.footer-sea__fish-wrap--right) {
+    animation: mobile-fish-swim-r 7s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
+  .footer-sea__fw-yellow .footer-sea__fish-img {
+    animation: mobile-flip-lr 14s linear infinite;
+  }
+
+  /* Green fish — ping-pong right ↔ left, flip to face direction of travel */
+  .footer-sea__fish-wrap--right {
+    animation: mobile-fish-swim-l 9s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
+
+  /* Orange coral — very slow sway */
+  .footer-sea__ocoral {
+    transform-origin: bottom center;
+    animation: mobile-coral-sway 7s ease-in-out infinite;
+  }
+
+  /* Green coral — very slow sway, offset phase */
+  .footer-sea__gc {
+    transform-origin: bottom center;
+    animation: mobile-coral-sway 8s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  /* Water top edge — gentle side-to-side sway */
+  .site-footer__wave {
+    animation: mobile-wave-sway 5s ease-in-out infinite;
   }
 }
 

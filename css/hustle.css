@@ -12,6 +12,15 @@
 }
 
 /* --------------------------------------------------------------------------
+   RESEARCH SUMMARY — Key Insights: vertically-stacked stat list, mobile only.
+   The "key insights.png" image stays for desktop/tablet; on mobile it's
+   swapped for real markup so each stat reads clearly in a single column.
+   -------------------------------------------------------------------------- */
+.hs-ki-list {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
    NEXT PROJECT — override the shared .cs-next-project card for this page
    to match the Figma spec: padding+gap inside the card instead of the
    mockup image bleeding edge-to-edge, and an uncropped icon.
@@ -788,6 +797,80 @@
   .cs-intro-text {
     font-size: 16px;
     margin-bottom: 16px;
+  }
+
+  /* ── Key Insights: swap flat image for a vertical stat list ── */
+  .hs-ki-image {
+    display: none;
+  }
+
+  .hs-ki-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hs-ki-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Donut progress ring — conic-gradient fill, percentage centered in the hole */
+  .hs-ki-ring {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: conic-gradient(#1E3FAE calc(var(--pct, 50) * 1%), #AEC9FB 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -28px;
+  }
+
+  .hs-ki-ring::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    background: var(--color-page-bg);
+  }
+
+  .hs-ki-ring__pct {
+    position: relative;
+    z-index: 1;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1C1C1C;
+  }
+
+  /* Gray card with a scalloped notch cut into its top edge for the ring to sit in */
+  .hs-ki-card {
+    width: 100%;
+    background: #F5F5F5;
+    border-radius: 20px;
+    padding: 44px 20px 24px;
+    -webkit-mask-image: radial-gradient(circle 70px at 50% 0%, transparent 99%, black 100%);
+    mask-image: radial-gradient(circle 70px at 50% 0%, transparent 99%, black 100%);
+  }
+
+  .hs-ki-item__desc {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #4B5563;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
   }
 
   /* ── Challenges ── */

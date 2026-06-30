@@ -404,8 +404,9 @@
   <!-- FOOTER -->
   <footer class="site-footer" aria-label="Site footer">
 
+    <!-- Wave at the very top edge of the footer — mobile only -->
     <img src="portfolio-design-images/footer illustrations/waves.png"
-         alt="" aria-hidden="true" loading="lazy"
+         alt="" aria-hidden="true" loading="eager"
          class="site-footer__wave">
 
     <!-- Teeny in floater — positioned on the wave/water surface -->
@@ -413,27 +414,31 @@
          alt="Teeny the duck relaxing in a pink pool float on the water surface"
          class="footer-sea__teeny" loading="lazy">
 
+    <!-- INFO BAND — sits on blue water below the wave -->
     <div class="footer-band">
 
+      <!-- Left: clock + message -->
       <div class="footer-band__left">
         <p class="footer-band__clock"><img src="portfolio-design-images/footer illustrations/yellow shells.png" alt="" aria-hidden="true" class="footer-band__clock-icon"> LAGOS <span id="lagos-time" aria-live="polite" aria-label="Current time in Lagos">9:00AM</span></p>
         <p class="footer-band__message">If you have any cool ideas, questions. Feel free to reach out to me for a chat. 💜</p>
       </div>
 
+      <!-- Middle: nav links -->
       <nav class="footer-band__nav" aria-label="Footer navigation">
         <a href="index.html" class="footer-band__nav-link">Works</a>
         <a href="about.html" class="footer-band__nav-link">About</a>
-        <a href="#" class="footer-band__nav-link">Resume</a>
+        <a href="https://drive.google.com/file/d/1CQYjmtOOulWqzke0gi_U4UttHId4qYxD/view?usp=drive_link" class="footer-band__nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
 
+      <!-- Right: social icon circles -->
       <div class="footer-band__socials">
-        <a href="mailto:toyobammy@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Toyo" class="footer-band__social-btn">
+        <a href="mailto:toyoscreativespace@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Toyo" class="footer-band__social-btn">
           <img src="icons/Gmail.png" alt="Gmail" loading="lazy">
         </a>
-        <a href="https://linkedin.com/in/omotoyosi-bamigboye" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-band__social-btn">
+        <a href="https://www.linkedin.com/in/omotoyosi-bamigboye/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-band__social-btn">
           <img src="icons/Linkedin.png" alt="LinkedIn" loading="lazy">
         </a>
-        <a href="https://behance.net/omotoyobamigbo" target="_blank" rel="noopener noreferrer" aria-label="Behance" class="footer-band__social-btn">
+        <a href="https://www.behance.net/omotoyobamigbo" target="_blank" rel="noopener noreferrer" aria-label="Behance" class="footer-band__social-btn">
           <img src="icons/Behance.png" alt="Behance" loading="lazy">
         </a>
         <a href="https://tiktok.com/@toyoscreativespace" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="footer-band__social-btn">
@@ -446,65 +451,107 @@
 
     </div>
 
+    <!-- PART 2: UNDERWATER SCENE -->
     <div class="footer-sea" aria-label="Underwater illustration">
 
+      <!-- Sand floor (desktop CSS version) -->
       <div class="footer-sea__sand" aria-hidden="true"></div>
 
+      <!-- Sand illustration (mobile only) -->
+      <img src="portfolio-design-images/footer illustrations/sand.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__sand-img">
+
+      <!-- 1. Green coral (far left / mobile left edge) -->
       <img src="portfolio-design-images/footer illustrations/green-coral.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:40px;bottom:80px;height:220px;">
+           class="footer-sea__el footer-sea__gc" style="left:0px;bottom:140px;height:300px;">
 
+      <!-- 2. Dark green seaweed (second from left — desktop only) -->
       <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:180px;bottom:80px;height:260px;">
+           class="footer-sea__el footer-sea__dgs-l" style="left:247px;bottom:35px;height:305px;">
 
-      <div class="footer-sea__fish-wrap" style="left:160px;bottom:240px;" aria-hidden="true">
-        <img src="portfolio-design-images/footer illustrations/yellow fish.png" alt="" loading="lazy" class="footer-sea__fish-img">
+      <!-- 3. Yellow fish "Say Hi" (left, swimming) -->
+      <div class="footer-sea__fish-wrap footer-sea__fw-yellow" style="left:160px;bottom:240px;" aria-hidden="true" onclick="window.location.href='mailto:toyoscreativespace@gmail.com'">
+        <img src="yellow fish.svg" alt="" loading="lazy" class="footer-sea__fish-img">
         <span class="footer-sea__fish-text">Say "Hi"</span>
       </div>
 
+      <!-- 4. Pink mushroom coral -->
       <img src="portfolio-design-images/footer illustrations/pink mushrooms.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:380px;bottom:80px;height:160px;">
+           class="footer-sea__el footer-sea__pink-mush" style="left:453px;bottom:42px;height:129px;">
 
+      <!-- 5. Pink starfish -->
       <img src="portfolio-design-images/footer illustrations/pink-star.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:300px;bottom:90px;height:50px;">
+           class="footer-sea__el footer-sea__pstar" style="left:186px;bottom:58px;height:62px;">
 
+      <!-- 6. Orange starfish -->
       <img src="portfolio-design-images/footer illustrations/orange star.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:440px;bottom:85px;height:45px;">
+           class="footer-sea__el footer-sea__ostar" style="left:372px;bottom:18px;height:62px;">
 
+      <!-- 7. Purple tube coral (center) -->
       <img src="portfolio-design-images/footer illustrations/purple tube coral.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:520px;bottom:80px;height:180px;">
+           class="footer-sea__el footer-sea__ptube" style="left:927px;bottom:56px;height:212px;">
 
+      <!-- 8. Standalone rock (between orange shells and pink shell) -->
       <img src="portfolio-design-images/footer illustrations/rocks.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:470px;bottom:80px;height:50px;">
+           class="footer-sea__el footer-sea__rock-1" style="left:785px;bottom:55px;height:40px;">
 
+      <!-- 8b. Second rock (mobile only — near tube coral) -->
       <img src="portfolio-design-images/footer illustrations/rocks.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:720px;bottom:80px;height:50px;">
+           class="footer-sea__el footer-sea__rock-2">
 
+      <!-- 9. Pink shell (desktop only) -->
       <img src="portfolio-design-images/footer illustrations/pink-shell.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="left:660px;bottom:85px;height:45px;">
+           class="footer-sea__el footer-sea__pshell" style="left:873px;bottom:42px;height:63px;">
 
+      <!-- 10. Yellow coral tree — desktop only -->
       <img src="portfolio-design-images/footer illustrations/yellow coral.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:340px;bottom:80px;height:240px;">
+           class="footer-sea__el footer-sea__ycoral" style="right:240px;bottom:112px;height:350px;">
 
+      <!-- 11. Orange coral tree -->
       <img src="portfolio-design-images/footer illustrations/orange coral.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:260px;bottom:80px;height:200px;">
+           class="footer-sea__el footer-sea__ocoral" style="right:147px;bottom:110px;height:265px;">
 
+      <!-- 12. Dark green seaweed (far right / mobile repositioned) -->
       <img src="portfolio-design-images/footer illustrations/dark green seaweed.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:40px;bottom:80px;height:260px;">
+           class="footer-sea__el footer-sea__dgs-r" style="right:0px;bottom:117px;height:405px;">
 
-      <div class="footer-sea__fish-wrap footer-sea__fish-wrap--right" style="right:180px;bottom:260px;" aria-hidden="true">
-        <img src="portfolio-design-images/footer illustrations/green fish.png" alt="" loading="lazy" class="footer-sea__fish-img footer-sea__fish-img--flip">
-        <span class="footer-sea__fish-text">Let's work</span>
+      <!-- 13. Green fish "Hire Me" (right, swimming) -->
+      <div class="footer-sea__fish-wrap footer-sea__fish-wrap--right footer-sea__fw-green" style="right:180px;bottom:260px;" aria-hidden="true" onclick="window.open('https://cal.com/toyoscreativespace','_blank')">
+        <img src="green fish.svg" alt="" loading="lazy" class="footer-sea__fish-img">
+        <span class="footer-sea__fish-text">Hire Me</span>
       </div>
 
+      <!-- 14. Purple mushroom -->
       <img src="portfolio-design-images/footer illustrations/purple mushrooms.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:60px;bottom:80px;height:140px;">
+           class="footer-sea__el footer-sea__purple-mush" style="right:42px;bottom:37px;height:129px;">
 
+      <!-- 15. Yellow shells (sea element) -->
       <img src="portfolio-design-images/footer illustrations/yellow shells.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:120px;bottom:85px;height:40px;">
+           class="footer-sea__el footer-sea__yshells" style="right:231px;bottom:34px;height:63px;">
 
+      <!-- 16. Purple starfish -->
       <img src="portfolio-design-images/footer illustrations/purple star.png" alt="" aria-hidden="true" loading="lazy"
-           class="footer-sea__el" style="right:200px;bottom:85px;height:50px;">
+           class="footer-sea__el footer-sea__pustar" style="right:342px;bottom:37px;height:62px;">
 
+      <!-- 17. Orange shells -->
+      <img src="portfolio-design-images/footer illustrations/orange shells.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__el footer-sea__oshells" style="left:669px;bottom:50px;height:62px;">
+
+      <!-- Bubble illustrations (mobile only) -->
+      <img src="portfolio-design-images/footer illustrations/bubbles.png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__bubble-img footer-sea__bubble-img--a">
+      <img src="portfolio-design-images/footer illustrations/bubbles (1).png" alt="" aria-hidden="true" loading="lazy"
+           class="footer-sea__bubble-img footer-sea__bubble-img--b">
+
+      <!-- Rock "Back to Top" — mobile only -->
+      <button class="footer-sea__rock-btn" onclick="scrollToTop()" aria-label="Back to top of page">
+        <span class="footer-sea__rock-btn-text">Back to<br>Top</span>
+      </button>
+
+      <!-- Back to land rock (desktop) — actual rocks.png illustration, sized/positioned to match reference -->
+      <button class="footer-sea__el footer-sea__back-btn" onclick="scrollToTop()" aria-label="Scroll back to top of page" style="left:38px;bottom:83px;">Back to land</button>
+
+      <!-- CSS bubbles — 12 scattered across the water (animated via JS) -->
       <div class="footer-sea__bubble" style="width:32px;height:32px;left:8%;top:18%;" aria-hidden="true"></div>
       <div class="footer-sea__bubble" style="width:20px;height:20px;left:16%;top:38%;" aria-hidden="true"></div>
       <div class="footer-sea__bubble" style="width:48px;height:48px;left:24%;top:12%;" aria-hidden="true"></div>
@@ -518,8 +565,8 @@
       <div class="footer-sea__bubble" style="width:30px;height:30px;left:90%;top:30%;" aria-hidden="true"></div>
       <div class="footer-sea__bubble" style="width:18px;height:18px;left:96%;top:56%;" aria-hidden="true"></div>
 
+      <!-- Bottom bar -->
       <div class="footer-sea__bar">
-        <button class="footer-sea__back-btn" onclick="scrollToTop()" aria-label="Scroll back to top of page">Back to land</button>
         <span class="footer-sea__copyright">&copy; 2026, Toyo's Creative Space</span>
         <span class="footer-sea__tagline">Made with love, loads of coffee and viju choco. 💜🍫</span>
       </div>
