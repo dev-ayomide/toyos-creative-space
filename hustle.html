@@ -51,14 +51,14 @@
           </svg>
         </button>
       </div>
-      <p class="mobile-menu__globe"><img src="mobile menu/globe.svg" alt="" class="mobile-menu__globe-icon">Works round the Globe</p>
+      <p class="mobile-menu__globe"><img src="mobile responsiveness/globe.svg" alt="" class="mobile-menu__globe-icon">Works round the Globe</p>
     </div>
   </div>
 
   <!-- Mobile Menu Toggle (mobile only) -->
   <button class="nav__hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-    <img src="mobile menu/menu.svg" alt="" class="nav__hamburger-icon">
-    <img src="mobile menu/cancel menu.png" alt="" class="nav__hamburger-close">
+    <img src="mobile responsiveness/menu.svg" alt="" class="nav__hamburger-icon">
+    <img src="mobile responsiveness/cancel menu.png" alt="" class="nav__hamburger-close">
   </button>
 
   <!-- Navigation — exact copy from index.html; Works link gets active state -->
@@ -654,6 +654,136 @@
     <!-- END .hs2-section -->
 
     <!-- ============================================================
+         MOBILE-ONLY: Design Deep Dive
+         Replaces .hs2-section on ≤768px. Uses annotated phone images
+         from hustle-mobile-view/ — desktop sees display:none.
+         ============================================================ -->
+    <section class="hs2-mobile" aria-label="Hustle app design deep dive — mobile">
+
+      <!-- 1: Home Screen -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/home details screen 1.png"
+          alt="Hustle home screen showing personalised greeting, earnings card and gig listings with annotation callouts"
+          class="hs2m-img"
+          loading="lazy"
+        >
+        <img
+          src="hustle-mobile-view/home screen text.png"
+          alt="1. Home Screen — design description"
+          class="hs2m-card"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 2 + 3 + text: Job Details of Unbooked Gigs -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/Job summary 2.png"
+          alt="Job Summary tab showing gig description, requirements and safety tips with annotation callouts"
+          class="hs2m-img"
+          loading="lazy"
+        >
+        <img
+          src="hustle-mobile-view/Client Details 3.png"
+          alt="Client Details tab showing client profile, star ratings and identity verification badges"
+          class="hs2m-img hs2m-img--sm"
+          loading="lazy"
+        >
+        <img
+          src="hustle-mobile-view/Job Details of unbooked gigs text.png"
+          alt="2. Job Details of Unbooked Gigs — design description"
+          class="hs2m-card"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 4 + text + 5: Job Details of Booked Gigs -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/Job details of booked gigs 4.png"
+          alt="Booked job details with disabled Release button during the 48 hour protection window"
+          class="hs2m-img"
+          loading="lazy"
+        >
+        <img
+          src="hustle-mobile-view/Job details of booked gigs text.png"
+          alt="3. Job Details of Booked Gigs — design description"
+          class="hs2m-card"
+          loading="lazy"
+        >
+        <img
+          src="hustle-mobile-view/Job details 5.png"
+          alt="Release gig confirmation modal where the client approves or declines the Hustler's request"
+          class="hs2m-img"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 6: Photo break -->
+      <div class="hs2m-photo-break">
+        <img
+          src="hustle-mobile-view/worker with helmet 6.png"
+          alt="A construction worker in a hard hat holding a phone running the Hustle app"
+          class="hs2m-photo-break__img"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 7: Client Screen — onboarding flow (3 phones) -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/client screen 7.png"
+          alt="Hustle client onboarding — three screens showing task location, description entry and review before posting"
+          class="hs2m-img"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 8: Client Home Screen (phone + description combined) -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/client home screen 8.png"
+          alt="Client home screen showing Top Hustlers and Quick Tasks shortcuts, with design description"
+          class="hs2m-combined"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 9: Applications — New Offers (phone + description combined) -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/Applications 9.png"
+          alt="Applications New Offers tab showing gig listings with applicant counts, with design description"
+          class="hs2m-combined"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 10: Applications — Completed Offers (phone + description combined) -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/Applications (completed offers) 10.png"
+          alt="Applications Completed tab showing past bookings with Book Again CTAs, with design description"
+          class="hs2m-combined"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- 11: My Payments (phone + description combined) -->
+      <div class="hs2m-block">
+        <img
+          src="hustle-mobile-view/My Payments 11.png"
+          alt="Payments screen showing wallet balance, payment method and full transaction history, with design description"
+          class="hs2m-combined"
+          loading="lazy"
+        >
+      </div>
+
+    </section>
+    <!-- END .hs2-mobile -->
+
+    <!-- ============================================================
          HUSTLE SECTION THREE — Visual Designs, Style Guide,
          Impact & Reflections
          ============================================================ -->
@@ -730,17 +860,26 @@
 
       <!-- ── Reflections ──────────────────────────────────────────── -->
       <section id="reflections" class="cs-section hs3-block">
-        <!-- Title is baked into Reflections.png below, so the live header is kept for the Contents nav but hidden visually to avoid a duplicate heading -->
-        <div class="cs-section__header cs-visually-hidden">
-          <img src="about-assets/blue star.png" alt="" class="cs-star-img" aria-hidden="true">
+        <!-- Title is baked into Reflections.png on desktop; shown as live heading on mobile -->
+        <div class="cs-section__header cs-visually-hidden hs3-reflections__header">
+          <img src="about-assets/pink star.png" alt="" class="cs-star-img" aria-hidden="true">
           <h2 class="cs-section__title">Reflections</h2>
         </div>
-        <img
-          src="hustle-project/assets in section one/Reflections.png"
-          alt="Reflections — Toyo sitting on rocks by the sea. I learnt a lot within the span of 7 weeks. Challenges were faced while gathering research from skilled workers who are not savvy with technology, so I had to do some of the surveys in person. I was also faced with creative block for a short period which I later overcame after reading design books like Practical UI and Refactoring UI, and scrolling through Pinterest. This project has taught me how to prioritize solutions first before beautiful interface, and I was able to express myself vicariously through my designs."
-          class="cs-full-image"
-          loading="lazy"
-        >
+        <!-- Desktop: full composite image. Mobile: white card frame with photo bleeding inside -->
+        <div class="hs3-reflections__frame">
+          <img
+            src="hustle-project/assets in section one/Reflections.png"
+            alt="Reflections — Toyo sitting on rocks by the sea. I learnt a lot within the span of 7 weeks. Challenges were faced while gathering research from skilled workers who are not savvy with technology, so I had to do some of the surveys in person. I was also faced with creative block for a short period which I later overcame after reading design books like Practical UI and Refactoring UI, and scrolling through Pinterest. This project has taught me how to prioritize solutions first before beautiful interface, and I was able to express myself vicariously through my designs."
+            class="cs-full-image hs3-reflections__photo"
+            loading="lazy"
+          >
+        </div>
+        <!-- Mobile-only text — hidden on desktop, shown below the photo frame on mobile -->
+        <div class="hs3-reflections__text">
+          <p>I learnt a lot within the span of 7 weeks. Challenges were faced while I was gathering research from skilled workers who are not savvy with technology, so I had to do some of the surveys in person.</p>
+          <p>I was also faced with creative block for a short period which I later overcame after reading some Design Books like &ldquo;Practical UI&rdquo;, &ldquo;Refactoring UI&rdquo;, Scrolling through Pinterest. I was able to find my creative spark again.</p>
+          <p>This Project has taught me how to prioritize solutions first before beautiful interface and I was able to express myself vicariously through my Designs and I am happy to be able to share that part of myself with everyone 💙</p>
+        </div>
       </section>
 
     </section>

@@ -1484,6 +1484,10 @@
     min-height: unset;
     padding-top: 0;
     overflow: hidden;
+    background-image: url('../Sea water mobile.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 
   .footer-sea__teeny {
@@ -1495,16 +1499,7 @@
   }
 
   .site-footer__wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    z-index: 4;
-    pointer-events: none;
+    display: none;
   }
 
   .footer-band {
@@ -1651,14 +1646,17 @@
     display: flex;
     position: absolute;
     left: 6px;
-    top: 614px;
-    width: 63px;
-    height: 31px;
+    top: 608px;
+    width: 68px;
+    height: 40px;
     z-index: 5;
     cursor: pointer;
-    background: #5C5C5C;
-    border: 1.5px solid #3a3a3a;
-    border-radius: 52% 48% 55% 45% / 45% 55% 50% 50%;
+    background-color: transparent;
+    background-image: url('../portfolio-design-images/footer illustrations/rocks.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
     padding: 0;
     align-items: center;
     justify-content: center;
@@ -1672,8 +1670,8 @@
     text-align: center;
     color: #ffffff;
     font-family: var(--font-family-primary);
-    font-size: 7px;
-    font-weight: var(--font-weight-semibold);
+    font-size: 12px;
+    font-weight: var(--font-weight-regular);
     line-height: 1.2;
     pointer-events: none;
     width: 100%;
@@ -1733,7 +1731,7 @@
   .footer-sea__pstar {
     left: 2px !important;
     right: auto !important;
-    top: 620px !important;
+    top: 576px !important;
     bottom: auto !important;
     height: 20px !important;
     transform: rotate(33.14deg) !important;
@@ -1766,9 +1764,9 @@
 
   .footer-sea__rock-2 {
     display: block !important;
-    left: 175px !important;
+    left: 250px !important;
     right: auto !important;
-    top: 619px !important;
+    top: 614px !important;
     bottom: auto !important;
     height: 22px !important;
   }
@@ -1778,7 +1776,13 @@
   }
 
   .footer-sea__ycoral {
-    display: none !important;
+    display: block !important;
+    right: auto !important;
+    left: 218px !important;
+    top: 480px !important;
+    bottom: auto !important;
+    height: 128px !important;
+    z-index: 1 !important;
   }
 
   .footer-sea__ocoral {
@@ -1787,7 +1791,7 @@
     top: 470px !important;
     bottom: auto !important;
     height: 155px !important;
-    z-index: 2 !important;
+    z-index: 1 !important;
   }
 
   .footer-sea__dgs-r {
@@ -1809,7 +1813,7 @@
   .footer-sea__purple-mush {
     right: auto !important;
     left: 320px !important;
-    top: 588px !important;
+    top: 604px !important;
     bottom: auto !important;
     height: 62px !important;
     clip-path: inset(0 0 15% 0) !important;
@@ -2211,5 +2215,360 @@
 
   .cs-next-project__description {
     font-size: 16px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP FOOTER ANIMATIONS (1025px+)
+   Isolated to desktop only — mobile/tablet untouched.
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+
+  /* ── Yellow fish: continuous left → right loop, always faces right ── */
+  @keyframes desktop-fish-lr {
+    from { transform: translateX(-400px); }
+    to   { transform: translateX(calc(100vw + 100px)); }
+  }
+
+  .footer-sea__fw-yellow.footer-sea__fish-wrap {
+    animation: desktop-fish-lr 20s linear infinite;
+    animation-delay: -8s;
+  }
+  .footer-sea__fw-yellow .footer-sea__fish-img {
+    animation: none;
+    transform: scaleX(1);
+  }
+
+  /* ── Green fish: continuous right → left loop, always faces left ──
+     The SVG natively faces LEFT so no scaleX flip is needed at all.
+     translateX moves it from off-screen right to off-screen left.
+  ── */
+  @keyframes desktop-fish-rl {
+    from { transform: translateX(300px); }
+    to   { transform: translateX(calc(-100vw - 200px)); }
+  }
+
+  .footer-sea__fw-green.footer-sea__fish-wrap {
+    animation: desktop-fish-rl 22s linear infinite;
+    animation-delay: -5s;
+  }
+  .footer-sea__fw-green .footer-sea__fish-img {
+    animation: none;
+    transform: none;
+  }
+  /* Restore text to its normal centered position (undo previous counter-flip) */
+  .footer-sea__fw-green .footer-sea__fish-text {
+    transform: translate(-50%, -50%);
+  }
+
+  /* ── Bubbles — rise and fade, staggered so they're always visible ── */
+  .footer-sea__bubble {
+    animation: bubble-rise 9s ease-in infinite;
+  }
+  .footer-sea__bubble:nth-child(2n)  { animation-delay: -1.5s; animation-duration: 10s; }
+  .footer-sea__bubble:nth-child(3n)  { animation-delay: -3.5s; animation-duration: 8s;  }
+  .footer-sea__bubble:nth-child(4n)  { animation-delay: -5.5s; animation-duration: 12s; }
+  .footer-sea__bubble:nth-child(5n)  { animation-delay: -2s;   animation-duration: 7s;  }
+  .footer-sea__bubble:nth-child(6n)  { animation-delay: -7s;   animation-duration: 11s; }
+  .footer-sea__bubble:nth-child(7n)  { animation-delay: -9s;   animation-duration: 13s; }
+
+  /* ── Seaweed — gentle underwater sway from base ── */
+  @keyframes seaweed-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    25%      { transform: rotate(4deg);  }
+    75%      { transform: rotate(-4deg); }
+  }
+
+  .footer-sea__dgs-l {
+    transform-origin: bottom center;
+    animation: seaweed-sway 6s ease-in-out infinite;
+  }
+  .footer-sea__dgs-r {
+    transform-origin: bottom center;
+    animation: seaweed-sway 7s ease-in-out infinite;
+    animation-delay: -2.5s;
+  }
+
+  /* ── Corals — gentle sway ── */
+  @keyframes coral-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    30%      { transform: rotate(2deg);  }
+    70%      { transform: rotate(-2deg); }
+  }
+
+  .footer-sea__ocoral {
+    transform-origin: bottom center;
+    animation: coral-sway 7s ease-in-out infinite;
+  }
+  .footer-sea__gc {
+    transform-origin: bottom center;
+    animation: coral-sway 8s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  /* ── Purple tube coral — very slow, barely perceptible sway ── */
+  @keyframes subtle-sway {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(1deg); }
+  }
+
+  .footer-sea__ptube {
+    transform-origin: bottom center;
+    animation: subtle-sway 12s ease-in-out infinite;
+  }
+
+  /* ── Mushrooms — barely moving, almost still ── */
+  .footer-sea__pink-mush {
+    transform-origin: bottom center;
+    animation: subtle-sway 14s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  .footer-sea__purple-mush {
+    transform-origin: bottom center;
+    animation: subtle-sway 13s ease-in-out infinite;
+    animation-delay: -6s;
+  }
+}
+
+/* ==========================================================================
+   TABLET FOOTER ANIMATIONS  (max-width: 1024px)
+   Replicates desktop animation set — overrides the default tiny-wobble fish.
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+  @keyframes tab-fish-lr {
+    from { transform: translateX(-400px); }
+    to   { transform: translateX(calc(100vw + 100px)); }
+  }
+  @keyframes tab-fish-rl {
+    from { transform: translateX(300px); }
+    to   { transform: translateX(calc(-100vw - 200px)); }
+  }
+  @keyframes tab-seaweed-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    25%      { transform: rotate(4deg);  }
+    75%      { transform: rotate(-4deg); }
+  }
+  @keyframes tab-coral-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    30%      { transform: rotate(2deg);  }
+    70%      { transform: rotate(-2deg); }
+  }
+  @keyframes tab-subtle-sway {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(1deg); }
+  }
+
+  /* Yellow fish: continuous left → right */
+  .footer-sea__fish-wrap:not(.footer-sea__fish-wrap--right) {
+    animation: tab-fish-lr 20s linear infinite;
+    animation-delay: -8s;
+  }
+  .footer-sea__fw-yellow .footer-sea__fish-img {
+    animation: none;
+    transform: none;
+  }
+
+  /* Green fish: continuous right → left, natively faces left */
+  .footer-sea__fish-wrap--right {
+    animation: tab-fish-rl 22s linear infinite;
+    animation-delay: -5s;
+  }
+  .footer-sea__fw-green .footer-sea__fish-img {
+    animation: none;
+    transform: none;
+  }
+
+  /* Bubbles */
+  .footer-sea__bubble {
+    animation: bubble-rise 9s ease-in infinite;
+  }
+  .footer-sea__bubble:nth-child(2n) { animation-delay: -1.5s; animation-duration: 10s; }
+  .footer-sea__bubble:nth-child(3n) { animation-delay: -3.5s; animation-duration: 8s;  }
+  .footer-sea__bubble:nth-child(4n) { animation-delay: -5.5s; animation-duration: 12s; }
+  .footer-sea__bubble:nth-child(5n) { animation-delay: -2s;   animation-duration: 7s;  }
+  .footer-sea__bubble:nth-child(6n) { animation-delay: -7s;   animation-duration: 11s; }
+  .footer-sea__bubble:nth-child(7n) { animation-delay: -9s;   animation-duration: 13s; }
+
+  /* Seaweed — both sides */
+  .footer-sea__dgs-l {
+    transform-origin: bottom center;
+    animation: tab-seaweed-sway 6s ease-in-out infinite;
+  }
+  .footer-sea__dgs-r {
+    transform-origin: bottom center;
+    animation: tab-seaweed-sway 7s ease-in-out infinite;
+    animation-delay: -2.5s;
+  }
+
+  /* Corals */
+  .footer-sea__ocoral {
+    transform-origin: bottom center;
+    animation: tab-coral-sway 7s ease-in-out infinite;
+  }
+  .footer-sea__gc {
+    transform-origin: bottom center;
+    animation: tab-coral-sway 8s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  /* Purple tube coral */
+  .footer-sea__ptube {
+    transform-origin: bottom center;
+    animation: tab-subtle-sway 12s ease-in-out infinite;
+  }
+
+  /* Mushrooms */
+  .footer-sea__pink-mush {
+    transform-origin: bottom center;
+    animation: tab-subtle-sway 14s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  .footer-sea__purple-mush {
+    transform-origin: bottom center;
+    animation: tab-subtle-sway 13s ease-in-out infinite;
+    animation-delay: -6s;
+  }
+}
+
+/* ==========================================================================
+   MOBILE FOOTER ANIMATIONS  (max-width: 768px)
+   Replicates desktop animation set — overrides the old bounce/flip fish.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* Water surface — slow gentle sway left ↔ right */
+  @keyframes mob-sea-sway {
+    0%, 100% { background-position: 40% top; }
+    50%       { background-position: 60% top; }
+  }
+
+  .site-footer {
+    animation: mob-sea-sway 9s ease-in-out infinite;
+  }
+
+  @keyframes mob-fish-lr {
+    from { transform: translateX(-400px); }
+    to   { transform: translateX(calc(100vw + 100px)); }
+  }
+  @keyframes mob-fish-rl {
+    from { transform: translateX(300px); }
+    to   { transform: translateX(calc(-100vw - 200px)); }
+  }
+  @keyframes mob-seaweed-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    25%      { transform: rotate(4deg);  }
+    75%      { transform: rotate(-4deg); }
+  }
+  @keyframes mob-coral-sway {
+    0%, 100% { transform: rotate(0deg);  }
+    30%      { transform: rotate(2deg);  }
+    70%      { transform: rotate(-2deg); }
+  }
+  @keyframes mob-subtle-sway {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(1deg); }
+  }
+
+  /* Yellow fish: continuous left → right, always faces right */
+  .footer-sea__fish-wrap:not(.footer-sea__fish-wrap--right) {
+    animation: mob-fish-lr 18s linear infinite;
+    animation-delay: -6s;
+  }
+  .footer-sea__fw-yellow .footer-sea__fish-img {
+    animation: none;
+    transform: none;
+  }
+
+  /* Green fish: continuous right → left, natively faces left */
+  .footer-sea__fish-wrap--right {
+    animation: mob-fish-rl 20s linear infinite;
+    animation-delay: -5s;
+  }
+  .footer-sea__fw-green .footer-sea__fish-img {
+    animation: none;
+    transform: none;
+  }
+
+  /* Bubbles — switch to bubble-rise, matching desktop behavior */
+  .footer-sea__bubble {
+    transform: none;
+    animation: bubble-rise 9s ease-in infinite;
+  }
+  .footer-sea__bubble:nth-child(2n) { animation-delay: -1.5s; animation-duration: 10s; }
+  .footer-sea__bubble:nth-child(3n) { animation-delay: -3.5s; animation-duration: 8s;  }
+  .footer-sea__bubble:nth-child(4n) { animation-delay: -5.5s; animation-duration: 12s; }
+  .footer-sea__bubble:nth-child(5n) { animation-delay: -2s;   animation-duration: 7s;  }
+  .footer-sea__bubble:nth-child(6n) { animation-delay: -7s;   animation-duration: 11s; }
+  .footer-sea__bubble:nth-child(7n) { animation-delay: -9s;   animation-duration: 13s; }
+
+  /* Seaweed — both sides */
+  .footer-sea__dgs-l {
+    transform-origin: bottom center;
+    animation: mob-seaweed-sway 6s ease-in-out infinite;
+  }
+  .footer-sea__dgs-r {
+    transform-origin: bottom center;
+    animation: mob-seaweed-sway 7s ease-in-out infinite;
+    animation-delay: -2.5s;
+  }
+
+  /* Corals */
+  .footer-sea__ocoral {
+    transform-origin: bottom center;
+    animation: mob-coral-sway 7s ease-in-out infinite;
+  }
+  .footer-sea__ycoral {
+    transform-origin: bottom center;
+    animation: mob-coral-sway 9s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  .footer-sea__gc {
+    transform-origin: bottom center;
+    animation: mob-coral-sway 8s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  /* Purple tube coral */
+  .footer-sea__ptube {
+    transform-origin: bottom center;
+    animation: mob-subtle-sway 12s ease-in-out infinite;
+  }
+
+  /* Mushrooms */
+  .footer-sea__pink-mush {
+    transform-origin: bottom center;
+    animation: mob-subtle-sway 14s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  .footer-sea__purple-mush {
+    transform-origin: bottom center;
+    animation: mob-subtle-sway 13s ease-in-out infinite;
+    animation-delay: -6s;
+  }
+
+  /* Fish text — positioned at the body centre of each SVG (yellow body=63%, green body=37%) */
+  .footer-sea__fw-yellow .footer-sea__fish-text {
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+  .footer-sea__fw-green .footer-sea__fish-text {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    display: block;
+    transform: translate(-50%, -50%);
   }
 }
